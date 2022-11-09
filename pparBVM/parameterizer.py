@@ -10,14 +10,7 @@ class BVMParameterizer():
         self.cmpds = list(self.structures_and_energies.keys())
         self.starting_parameters = starting_parameters
         self.gs_structures_and_energies = self.get_gs_structures_and_energies()
-
-        try:
-            from mpi4py import MPI
-            comm = MPI.COMM_WORLD
-            myrank = comm.Get_rank()
-        except:
-            raise ImportError('mpi4py is required for parallelization') 
-
+    
     def get_gs_structures_and_energies(self):
         gs_structures_and_energies = {}
         for cmpd in self.cmpds:

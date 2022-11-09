@@ -1,4 +1,6 @@
 from concurrent.futures import ProcessPoolExecutor
+from multiprocessing import Pool
+from multiprocessing import get_context
 from pymatgen.core.structure import Structure
 from pymatgen.analysis.local_env import CrystalNN
 from pparBVM.calculator import GIICalculator
@@ -11,6 +13,7 @@ from tqdm import tqdm
 from copy import deepcopy
 import argparse
 import json
+import time
 
 def argument_parser():
     parser = argparse.ArgumentParser()
@@ -25,32 +28,28 @@ def get_data(filename):
         data = json.load(f)
     return data
 
-def get_neighbors(sed, nnf, cmpd):
+def get_values(sed, nnf, cmpd):
+    giic = GIICalculator()
     structures = []
     for structure in sed[cmpd]['structures']:
         neighbors = []
         s = Structure.from_dict(structure)
+        gii = giic.GII(s)
         for i in range(len(s)):
             nn_info = nnf.get_nn_info(s, i)
             site_neighbors = [nn_dict['site'] for nn_dict in nn_info]
             neighbors.append(site_neighbors)
         s.add_site_property('neighbors', neighbors)
         structures.append(s)
-    return (structures, sed[cmpd]['energies'])
+    return (structures, sed[cmpd]['energies']), giic.params_dict
 
-def pool_neighbors_map(cmpds, sed, nnf, nprocs):
-    partial_neighbors = functools.partial(get_neighbors, sed, nnf)
-    with ProcessPoolExecutor(max_workers=nprocs) as executor:
-        data_dict = {cmpd: {'structures': sed_tup[0], 'energies': sed_tup[1]} for cmpd, sed_tup in zip(cmpds, tqdm(executor.map(partial_neighbors, cmpds)))}
-    return data_dict
-
-def get_pairs(sed, giic, cmpd):
-    pairs = []
-    for structure in sed[cmpd]['structures']:
-        s = Structure.from_dict(structure)
-        gii = giic.GII(s, use_sym=True) 
-        params = deepcopy(giic.params_dict)
-    return params
+def pool_map(cmpds, sed, nnf, nprocs):
+    partial_values = functools.partial(get_values, sed, nnf)
+    with get_context('spawn').Pool(processes=nprocs) as pool:
+        data, params = zip(*pool.map(partial_values, cmpds))
+    data_dict = {cmpd: {'structures': sed_tup[0], 'energies': sed_tup[1]} for cmpd, sed_tup in zip(cmpds, data)}
+    params_dict = merge_dcts(list(params))    
+    return data_dict, params_dict
 
 def merge_dcts(dcts):
     params_dict = {'Cation': [], 'Anion': [], 'R0': [], 'B': []}
@@ -66,34 +65,26 @@ def merge_dcts(dcts):
                 pairs.append(pair)
     return params_dict
 
-def pool_pairs_map(cmpds, sed, giic, nprocs):
-    partial_pairs = functools.partial(get_pairs, sed, giic)
-    with ProcessPoolExecutor(max_workers=nprocs) as executor:
-        dcts = list(tqdm(executor.map(partial_pairs, cmpds)))
-    params_dict = merge_dcts(dcts)
-    return params_dict
-
 if __name__ == '__main__':
     args = argument_parser()
 
     ### Read-in the structures and energies dictionary ###
-    print('Loading dict...')
+    print('Loading dict...\n')
     sed = get_data(args.structure_energy_dictionary)
     cmpds = list(sed.keys())[0:1]
 
-    ### Get the structures + energies with neighbors as site properties ###
-    print('Finding neighbors...')
+    ### Get the structures + energies with neighbors and choose starting dictionary ###
+    print('Finding neighbors and choosing starting dictionary...\n')
     nnf = CrystalNN()
-    pmg_sed = pool_neighbors_map(cmpds, sed, nnf, mp.cpu_count())
+    pmg_sed, params_dict = pool_map(cmpds, sed, nnf, mp.cpu_count())
+    print('Starting parameters:')
+    print(params_dict)
+    print()
 
-    ### Get starting parameterization dictionary  ###
-    print('Choosing starting parameters...')
-    giic = GIICalculator()
-    params_dict = pool_pairs_map(cmpds, sed, giic, mp.cpu_count())
-    print(params_dict)  
-  
     ### Parameterize using starting dictionary ###
-    print('Parameterizing...')
+    print('Parameterizing...\n')
     bvmp = BVMParameterizer(pmg_sed, params_dict)
     new_params = bvmp.optimizer()
+    print('Optimized parameters:')
     print(new_params)
+    print()
