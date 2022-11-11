@@ -1,7 +1,7 @@
 import os
-import argparse 
+import argparse
 
-def write(nodes, cores, time, out, alloc, script, read, write):
+def write(nodes, cores, time, out, alloc, script, read, write, algo, kwargs, options):
     writelines = '#!/bin/bash' + '\n'
     writelines += '#SBATCH -J ' + out + '\n'
     writelines += '#SBATCH --time=' + str(time) + ':00:00' + '\n'
@@ -18,8 +18,8 @@ def write(nodes, cores, time, out, alloc, script, read, write):
         writelines += '#SBATCH --partition=long\n'
     else:
         writelines += '#SBATCH --partition=standard\n'
-    #writelines +='python ' + script + ' -d ' + read + ' -w ' + write + '\n'
-    writelines += 'python ' + script + ' -d ' + read + '\n'
+
+    writelines += 'python '+script+' -r '+read+' -w '+write+' -l '+algo+' -k '+"\'{0}\'".format(kwargs)+' -p '+"\'{0}\'".format(options)+'\n'
     writelines +='exit 0'+'\n'
 
     with open('submit.sh', 'w') as f:
@@ -29,6 +29,8 @@ def write(nodes, cores, time, out, alloc, script, read, write):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
+
+    ### General SC run arguments ###
     parser.add_argument('-n', '--nodes', help = 'Number of nodes',
                         type = int, default = 1)
     parser.add_argument('-c', '--cores', help = 'Number of cores',
@@ -41,12 +43,20 @@ if __name__ == '__main__':
                         type = str, default = 'custws')
     parser.add_argument('-s', '--script', help = 'Python script to submit.',
                         type = str, required = True)
-    parser.add_argument('-r', '--read_file_name', help = '.json read from',
-                        type = str, required = True)
-    parser.add_argument('-w', '--write_file_name', help = '.json written to',
-                        type = str, required = True)
-    args = parser.parse_args()
 
+    ### run_parameterization.py arguments  ###
+    parser.add_argument(
+        '-r', '--read_file', help='path to .json file with structures and energies', type=str, required=True)
+    parser.add_argument(
+        '-l', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
+    parser.add_argument(
+        '-k', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=str, required=False)
+    parser.add_argument(
+        '-p', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=str, required=False)
+    parser.add_argument(
+        '-w', '--write_file', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
+
+    args = parser.parse_args()
     write(args.nodes, args.cores, args.time, args.outfile, args.allocation,
-          args.script, args.read_file_name, args.write_file_name)
+          args.script, args.read_file, args.write_file, args.algorithm, args.optimizer_kwargs, args.optimizer_options)
     os.system('sbatch submit.sh')

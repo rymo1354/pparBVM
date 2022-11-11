@@ -1,8 +1,10 @@
 from copy import deepcopy
-from pyOpt import SLSQP, Optimization
+from pyOpt import Optimization
 from pparBVM.calculator import GIICalculator
 import numpy as np
 from scipy.stats import pearsonr
+import importlib
+import sys
 
 class BVMParameterizer():
     def __init__(self, structures_and_energies, starting_parameters):
@@ -10,7 +12,13 @@ class BVMParameterizer():
         self.cmpds = list(self.structures_and_energies.keys())
         self.starting_parameters = starting_parameters
         self.gs_structures_and_energies = self.get_gs_structures_and_energies()
-    
+   
+    def __evaluator__(self, val):
+        try:
+            return eval(val)
+        except NameError: 
+            return val
+
     def get_gs_structures_and_energies(self):
         gs_structures_and_energies = {}
         for cmpd in self.cmpds:
@@ -57,37 +65,80 @@ class BVMParameterizer():
         print('Mean pearson: %s' % str(np.round(float(pearson), 3)))
         return val
 
-    def optimizer(self, algo=SLSQP, sens_type='CS', sens_mode='pgc'):
+    def optimization_function(self):
         '''
+        General Formulation: 
         for structures i composing unique chemical compositions alpha:
             min. sum(GII_GS)
             s.t. mean(pearson(GII, energy))  <= C, where -1 <= C <= 1
+
+        algo (str): algorithm to be used from the pyOpt package
+        kwargs (dct): dictionary of kwargs for the optimizer
+        options (dct): dictionary of options for the optimizer
+
+        see http://www.pyopt.org/reference/optimizers.html for supported optimizers, kwargs and options
         '''
         def obj_func(x):
             f = self.mu_GIIGS(x)
             g = [self.mu_Pearson(x)]
             fail = 0
             return f, g, fail
-        
+
         def getlastsolution(prob: Optimization):
             new_index = prob.firstavailableindex(prob.getSolSet())
             return prob.getSol(new_index - 1)
 
+        ### Instantiate Optimization object ###
         opt_prob = Optimization('GII_GS with Pearson Constraint', obj_func)
-        
+
+        ### Add optimization variables ###
         for i in range(len(self.starting_parameters['Cation'])):
             opt_prob.addVar('x'+str(i+1), 'c', lower=0.0, upper=4.0, value=self.starting_parameters['R0'][i])
-        
+
+        ### Specify objective function and constraint(s) ###
         opt_prob.addObj('f')
         opt_prob.addCon('g1', 'i')
-        o = algo()
-        o.setOption('IPRINT', 1)
-        o(opt_prob, sens_type=sens_type) 
         
+        return opt_prob
+
+    def optimizer(self, algo, kwargs=None, options=None):
+        ### Import Optimizer ###
+        try:
+            'Note: pyOpt must be on PATH' 
+            i = importlib.import_module("pyOpt.py{0}.py{0}".format(algo))
+            oi = getattr(i, algo)
+            o = oi()
+        except ImportError:
+            print('Invalid optimizer %s; exiting' % algo)
+            sys.exit(1)
+        
+        ### Set Optimizer options ###
+        if options is not None:
+            for key in list(options.keys()):
+                try:
+                    o.setOption(key, self.__evaluator__(options[key])) # Get correct data type
+                except OSError:
+                    print('%s not valid optimizer option; exiting' % key)
+                    sys.exit(1)
+        
+        ### Set Optimizer **kwargs and optimize ###
+        opt_prob = self.optimization_function()
+        if kwargs is not None:
+            try: 
+                kwargs_converted = {key: self.__evaluator__(kwargs[key]) for key in list(kwargs.keys())} # Get correct data type
+                o(opt_prob, **kwargs_converted) 
+            except TypeError:
+                print('Invalid keyword argument for obj_func; exiting')
+                sys.exit(1)
+        else:
+            o(opt_prob)
+        
+        ### Get Optimizer solution ###
         res = opt_prob.solution(0)
         print(res)
         vs = res.getVarSet()
         x = [np.round(vs[key].value, 3) for key in vs]
         new_params = deepcopy(self.starting_parameters)
         new_params['R0'] = x
+
         return new_params

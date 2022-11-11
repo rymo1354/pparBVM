@@ -18,7 +18,15 @@ import time
 def argument_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-d', '--structure_energy_dictionary', help='.json file with structures and energies', type=str, required=True)
+        '-r', '--read_file', help='path to .json file with structures and energies', type=str, required=True)
+    parser.add_argument(
+        '-l', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
+    parser.add_argument(
+        '-k', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=json.loads, required=False)
+    parser.add_argument(
+        '-p', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=json.loads, required=False)
+    parser.add_argument(
+        '-w', '--write_file', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
     args = parser.parse_args()
 
     return args
@@ -65,18 +73,34 @@ def merge_dcts(dcts):
                 pairs.append(pair)
     return params_dict
 
+def write_params_dict(params_dict, write_path):
+    write_params = {}
+    write_params['Cation'] = [c.as_dict() for c in params_dict['Cation']]
+    write_params['Anion'] = [a.as_dict() for a in params_dict['Anion']]
+    write_params['R0'] = params_dict['R0']
+    write_params['B'] = params_dict['B']
+
+    with open(write_path, 'w') as fp:
+        json.dump(write_params, fp)
+    return 
+
 if __name__ == '__main__':
     args = argument_parser()
 
     ### Read-in the structures and energies dictionary ###
     print('Loading dict...\n')
-    sed = get_data(args.structure_energy_dictionary)
+    sed = get_data(args.read_file)
     cmpds = list(sed.keys())[0:1]
 
     ### Get the structures + energies with neighbors and choose starting dictionary ###
-    print('Finding neighbors and choosing starting dictionary...\n')
+    print('Finding neighbors and choosing starting dictionary...')
     nnf = CrystalNN()
     pmg_sed, params_dict = pool_map(cmpds, sed, nnf, mp.cpu_count())
+    s_params = params_dict['Cation']
+    structures_lists = [pmg_sed[cmpd]['structures'] for cmpd in cmpds]
+    structures = [s for structures_list in structures_lists for s in structures_list]
+    
+    print('Optimizing %s parameters over %s structures comprising %s compositions\n...' % (len(s_params), len(structures), len(cmpds)))
     print('Starting parameters:')
     print(params_dict)
     print()
@@ -84,7 +108,10 @@ if __name__ == '__main__':
     ### Parameterize using starting dictionary ###
     print('Parameterizing...\n')
     bvmp = BVMParameterizer(pmg_sed, params_dict)
-    new_params = bvmp.optimizer()
+    new_params = bvmp.optimizer(algo=args.algorithm, kwargs=args.optimizer_kwargs, options=args.optimizer_options)
+    if args.write_file is not None:
+        write_params_dict(new_params, args.write_file)
     print('Optimized parameters:')
     print(new_params)
     print()
+
