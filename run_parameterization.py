@@ -100,7 +100,7 @@ if __name__ == '__main__':
     structures_lists = [pmg_sed[cmpd]['structures'] for cmpd in cmpds]
     structures = [s for structures_list in structures_lists for s in structures_list]
     
-    print('Optimizing %s parameters over %s structures comprising %s compositions\n...' % (len(s_params), len(structures), len(cmpds)))
+    print('Optimizing %s parameters over %s structures comprising %s compositions\n' % (len(s_params), len(structures), len(cmpds)))
     print('Starting parameters:')
     print(params_dict)
     print()
