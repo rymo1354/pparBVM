@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Pool
 from multiprocessing import get_context
 from pymatgen.core.structure import Structure
 from pymatgen.analysis.local_env import CrystalNN
-from pparBVM.calculator import GIICalculator
-from pparBVM.parameterizer import BVMParameterizer
+from pparBVM import GIICalculator
+from pparBVM import BVMParameterizer
 from scipy.stats import pearsonr
 import functools
 import multiprocessing as mp

@@ -1,2 +1,2 @@
-#from pparBVM.calculator import GIICalculator
-#from pparBVM.parameterizer import BVMParameterizer
+from .calculator import GIICalculator
+from .parameterizer import BVMParameterizer

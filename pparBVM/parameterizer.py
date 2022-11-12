@@ -102,12 +102,16 @@ class BVMParameterizer():
         return opt_prob
 
     def optimizer(self, algo, kwargs=None, options=None):
-        ### Import Optimizer ###
+        ### Import and Initialize Optimizer ###
         try:
             'Note: pyOpt must be on PATH' 
             i = importlib.import_module("pyOpt.py{0}.py{0}".format(algo))
             oi = getattr(i, algo)
-            o = oi()
+            try:
+                o = oi(pll_type=kwargs['pll_type']) # To specify function parallelization
+                del kwargs['pll_type']
+            except (TypeError, KeyError) as e:
+                o = oi()
         except ImportError:
             print('Invalid optimizer %s; exiting' % algo)
             sys.exit(1)
