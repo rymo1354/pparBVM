@@ -19,6 +19,7 @@ def write(nodes, cores, time, out, alloc, script, read, write, algo, kwargs, opt
     else:
         writelines += '#SBATCH --partition=standard\n'
 
+    writelines += 'module purge\n' # To avoid errors with mpi4py importing MPI
     writelines += 'python '+script+' -r '+read+' -w '+write+' -l '+algo+' -k '+"\'{0}\'".format(kwargs)+' -p '+"\'{0}\'".format(options)+'\n'
     writelines +='exit 0'+'\n'
 
