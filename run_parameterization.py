@@ -90,30 +90,30 @@ if __name__ == '__main__':
     args = argument_parser()
 
     ### Read-in the structures and energies dictionary ###
-    print('Loading dict...\n')
+    print('Loading dict...\n', flush=True)
     sed = get_data(args.read_file)
     cmpds = list(sed.keys())[0:1]
 
     ### Get the structures + energies with neighbors and choose starting dictionary ###
-    print('Finding neighbors and choosing starting dictionary...')
+    print('Finding neighbors and choosing starting dictionary...', flush=True)
     nnf = CrystalNN()
     pmg_sed, params_dict = pool_map(cmpds, sed, nnf, mp.cpu_count())
     s_params = params_dict['Cation']
     structures_lists = [pmg_sed[cmpd]['structures'] for cmpd in cmpds]
     structures = [s for structures_list in structures_lists for s in structures_list]
     
-    print('Optimizing %s parameters over %s structures comprising %s compositions\n' % (len(s_params), len(structures), len(cmpds)))
-    print('Starting parameters:')
-    print(params_dict)
-    print()
+    print('Optimizing %s parameters over %s structures comprising %s compositions\n' % (len(s_params), len(structures), len(cmpds)), flush=True)
+    print('Starting parameters:', flush=True)
+    print(params_dict, flush=True)
+    print(flush=True)
 
     ### Parameterize using starting dictionary ###
-    print('Parameterizing...\n')
+    print('Parameterizing...\n', flush=True)
     bvmp = BVMParameterizer(pmg_sed, params_dict)
     new_params = bvmp.optimizer(algo=args.algorithm, kwargs=args.optimizer_kwargs, options=args.optimizer_options)
     if args.write_file is not None:
         write_params_dict(new_params, args.write_file)
-    print('Optimized parameters:')
-    print(new_params)
-    print()
+    print('Optimized parameters:', flush=True)
+    print(new_params, flush=True)
+    print(flush=True)
 
