@@ -1,34 +1,30 @@
 #!/usr/bin/env python
 
-from concurrent.futures import ProcessPoolExecutor
-from multiprocessing import Pool
-from multiprocessing import get_context
+from mpi4py import MPI
 from pymatgen.core.structure import Structure
-from pymatgen.analysis.local_env import CrystalNN
+from pymatgen.core.structure import PeriodicSite, PeriodicNeighbor
+from pymatgen.core.periodic_table import Specie
 from pparBVM import GIICalculator
 from pparBVM import BVMParameterizer
 from scipy.stats import pearsonr
-import functools
-import multiprocessing as mp
-import numpy as np
-from tqdm import tqdm
 from copy import deepcopy
 import argparse
 import json
-import time
 
 def argument_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-r', '--read_file', help='path to .json file with structures and energies', type=str, required=True)
+        '-rse', '--read_structures_energies', help='path to .json file with structures and energies', type=str, required=True)
     parser.add_argument(
-        '-l', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
+        '-rp', '--read_parameters', help='path to .json file with BVM parameters', type=str, required=True)
     parser.add_argument(
-        '-k', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=json.loads, required=False)
+        '-algo', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
     parser.add_argument(
-        '-p', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=json.loads, required=False)
+        '-kw', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=json.loads, required=True)
     parser.add_argument(
-        '-w', '--write_file', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
+        '-opt', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=json.loads, required=True)
+    parser.add_argument(
+        '-wp', '--write_parameters', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
     args = parser.parse_args()
 
     return args
@@ -38,82 +34,97 @@ def get_data(filename):
         data = json.load(f)
     return data
 
-def get_values(sed, nnf, cmpd):
-    giic = GIICalculator()
-    structures = []
-    for structure in sed[cmpd]['structures']:
-        neighbors = []
-        s = Structure.from_dict(structure)
-        gii = giic.GII(s)
-        for i in range(len(s)):
-            nn_info = nnf.get_nn_info(s, i)
-            site_neighbors = [nn_dict['site'] for nn_dict in nn_info]
-            neighbors.append(site_neighbors)
-        s.add_site_property('neighbors', neighbors)
-        structures.append(s)
-    return (structures, sed[cmpd]['energies']), giic.params_dict
+def get_site_neighbors(j_structure):
+    ### Get site neighbors from PeriodicNeighbor.as_dict() ###
+    all_neighbors = []
+    for site in j_structure['sites']:
+        neighbors_list = []
+        for neighbor in site['properties']['neighbors']:
+            ps = PeriodicSite.from_dict(neighbor)
+            neighbors_list.append(ps)
+        all_neighbors.append(neighbors_list)
+    return all_neighbors
 
-def pool_map(cmpds, sed, nnf, nprocs):
-    partial_values = functools.partial(get_values, sed, nnf)
-    with get_context('spawn').Pool(processes=nprocs) as pool:
-        data, params = zip(*pool.map(partial_values, cmpds))
-    data_dict = {cmpd: {'structures': sed_tup[0], 'energies': sed_tup[1]} for cmpd, sed_tup in zip(cmpds, data)}
-    params_dict = merge_dcts(list(params))    
-    return data_dict, params_dict
+def sanitize_structure(j_structure):
+    ### Remove site properties so Structure object can be read ### 
+    sj_structure = deepcopy(j_structure)
+    for site in sj_structure['sites']:
+        del site['properties']
+    return sj_structure
 
-def merge_dcts(dcts):
-    params_dict = {'Cation': [], 'Anion': [], 'R0': [], 'B': []}
-    pairs = []
-    for dct in dcts:
-        for i in range(len(dct['Cation'])):
-            pair = [dct['Cation'][i], dct['Anion'][i]]
-            if pair not in pairs:
-                params_dict['Cation'].append(dct['Cation'][i])
-                params_dict['Anion'].append(dct['Anion'][i])
-                params_dict['R0'].append(dct['R0'][i])
-                params_dict['B'].append(dct['B'][i])
-                pairs.append(pair)
-    return params_dict
+def get_structures_energies(dct):
+    use_se = {}
+    for cmpd in list(dct.keys()):
+        use_se[cmpd] = {}
+        structures = []
+        for j_structure in dct[cmpd]['structures']:
+            neighbors = get_site_neighbors(j_structure)
+            structure = Structure.from_dict(sanitize_structure(j_structure))
+            structure.add_site_property('neighbors', neighbors) 
+            structures.append(structure)
+        use_se[cmpd]['structures'] = structures
+        use_se[cmpd]['energies'] = dct[cmpd]['energies']
+    return use_se
 
-def write_params_dict(params_dict, write_path):
-    write_params = {}
-    write_params['Cation'] = [c.as_dict() for c in params_dict['Cation']]
-    write_params['Anion'] = [a.as_dict() for a in params_dict['Anion']]
-    write_params['R0'] = params_dict['R0']
-    write_params['B'] = params_dict['B']
+def count_structures(dct):
+    count = 0
+    for cmpd in list(dct.keys()):
+        for structure in dct[cmpd]['structures']:
+            count += 1
+    return count
 
-    with open(write_path, 'w') as fp:
-        json.dump(write_params, fp)
-    return 
+def get_parameters(params):
+    use_params = {'Cation': [], 'Anion': [], 'R0': [], 'B': []}
+    use_params['Cation'] = [Specie.from_dict(c) for c in params['Cation']]
+    use_params['Anion'] = [Specie.from_dict(a) for a in params['Anion']]
+    use_params['R0'] = params['R0']
+    use_params['B'] = params['B']
+    return use_params
 
+def write_data(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f)
+    return
+
+def params_to_json(params):
+    json_params = {'Cation': [], 'Anion': [], 'R0': [], 'B': []}
+    json_params['Cation'] = [c.as_dict() for c in params['Cation']]
+    json_params['Anion'] = [a.as_dict() for a in params['Anion']]
+    json_params['R0'] = params['R0']
+    json_params['B'] = params['B']
+    return json_params
+ 
 if __name__ == '__main__':
     args = argument_parser()
+    comm = MPI.COMM_WORLD
+    rank = comm.Get_rank()
 
-    ### Read-in the structures and energies dictionary ###
-    print('Loading dict...\n', flush=True)
-    sed = get_data(args.read_file)
-    cmpds = list(sed.keys())[0:1]
+    if rank == 0:
+        ### Read-in the structures and energies dictionary ###
+        print('Loading dictonaries...\n', flush=True)
+    sed = get_data(args.read_structures_energies)
+    osed = get_structures_energies(sed)
+    scount = count_structures(osed)
 
-    ### Get the structures + energies with neighbors and choose starting dictionary ###
-    print('Finding neighbors and choosing starting dictionary...', flush=True)
-    nnf = CrystalNN()
-    pmg_sed, params_dict = pool_map(cmpds, sed, nnf, mp.cpu_count())
-    s_params = params_dict['Cation']
-    structures_lists = [pmg_sed[cmpd]['structures'] for cmpd in cmpds]
-    structures = [s for structures_list in structures_lists for s in structures_list]
-    
-    print('Optimizing %s parameters over %s structures comprising %s compositions\n' % (len(s_params), len(structures), len(cmpds)), flush=True)
-    print('Starting parameters:', flush=True)
-    print(params_dict, flush=True)
-    print(flush=True)
+    params = get_data(args.read_parameters)
+    oparams = get_parameters(params)
 
-    ### Parameterize using starting dictionary ###
-    print('Parameterizing...\n', flush=True)
-    bvmp = BVMParameterizer(pmg_sed, params_dict)
+    if rank == 0:
+        print('Optimizing %s parameters over %s structures comprising %s compositions\n' % (len(oparams['Cation']), scount, len(osed)), flush=True)
+        print('Starting parameters:', flush=True)
+        print(oparams, flush=True)
+        print(flush=True)
+
+    if rank == 0:
+        ### Parameterize using starting dictionaries ###
+        print('Parameterizing...', flush=True)
+    bvmp = BVMParameterizer(osed, oparams)
     new_params = bvmp.optimizer(algo=args.algorithm, kwargs=args.optimizer_kwargs, options=args.optimizer_options)
-    if args.write_file is not None:
-        write_params_dict(new_params, args.write_file)
-    print('Optimized parameters:', flush=True)
-    print(new_params, flush=True)
-    print(flush=True)
+    json_params = params_to_json(new_params)
+    if args.write_parameters is not None:
+        write_data(json_params, args.write_parameters)
 
+    if rank == 0:
+        print('Optimized parameters:', flush=True)
+        print(new_params, flush=True)
+        print(flush=True)

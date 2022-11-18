@@ -1,7 +1,8 @@
 import os
 import argparse
 
-def write(nodes, cores, time, out, alloc, script, read, write, algo, kwargs, options):
+
+def write(nodes, cores, time, out, alloc, script, read_se, read_p, write_p, algo, kwargs, options):
     writelines = '#!/bin/bash' + '\n'
     writelines += '#SBATCH -J ' + out + '\n'
     writelines += '#SBATCH --time=' + str(time) + ':00:00' + '\n'
@@ -19,8 +20,7 @@ def write(nodes, cores, time, out, alloc, script, read, write, algo, kwargs, opt
     else:
         writelines += '#SBATCH --partition=standard\n'
 
-    writelines += 'module purge\n' # To avoid errors with mpi4py importing MPI
-    writelines += 'python '+script+' -r '+read+' -w '+write+' -l '+algo+' -k '+"\'{0}\'".format(kwargs)+' -p '+"\'{0}\'".format(options)+'\n'
+    writelines += 'srun'+' -n '+str(nodes*cores)+' python '+script+' -rse '+read_se+' -rp '+read_p+' -wp '+write_p+' -algo '+algo+' -kw '+"\'{0}\'".format(kwargs)+' -opt '+"\'{0}\'".format(options)+'\n'
     writelines +='exit 0'+'\n'
 
     with open('submit.sh', 'w') as f:
@@ -47,17 +47,19 @@ if __name__ == '__main__':
 
     ### run_parameterization.py arguments  ###
     parser.add_argument(
-        '-r', '--read_file', help='path to .json file with structures and energies', type=str, required=True)
+        '-rse', '--read_structures_energies', help='path to .json file with structures and energies', type=str, required=True)
     parser.add_argument(
-        '-l', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
+        '-rp', '--read_parameters', help='path to .json file with BVM parameters', type=str, required=True)
     parser.add_argument(
-        '-k', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=str, required=False)
+        '-algo', '--algorithm', help='pyOpt algorithm to use', type=str, required=True)
     parser.add_argument(
-        '-p', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=str, required=False)
+        '-kw', '--optimizer_kwargs', help='.json convertible str of pyOpt optimizer kwargs, form \'{"key": "value"}\'', type=str, required=True)
     parser.add_argument(
-        '-w', '--write_file', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
-
+        '-opt', '--optimizer_options', help='.json convertible str of pyOpt optimizer options, form \'{"key": "value"}\'', type=str, required=True)
+    parser.add_argument(
+        '-wp', '--write_parameters', help='path to .json file of parameterized bond valence parameters', type=str, required=False)
     args = parser.parse_args()
+
     write(args.nodes, args.cores, args.time, args.outfile, args.allocation,
-          args.script, args.read_file, args.write_file, args.algorithm, args.optimizer_kwargs, args.optimizer_options)
+          args.script, args.read_structures_energies, args.read_parameters, args.write_parameters, args.algorithm, args.optimizer_kwargs, args.optimizer_options)
     os.system('sbatch submit.sh')

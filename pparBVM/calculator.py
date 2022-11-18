@@ -177,7 +177,10 @@ class GIICalculator():
         # Note: can edit this to include same charge interactions
         bvs = 0
         for neighbor in neighboring_sites:
-            distance = neighbor.nn_distance # get distance from PeriodicSite object
+            try:
+                distance = neighbor.nn_distance # get distance from PeriodicNeighbor object
+            except AttributeError: # for PeriodicSite objects
+                distance = site.distance(neighbor)
             R0, B = self.get_bvparams(site, neighbor)
             sij = self.sij(R0, B, distance)
             bvs += sij

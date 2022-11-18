@@ -1,3 +1,4 @@
+from mpi4py import MPI
 from copy import deepcopy
 from pyOpt import Optimization
 from pparBVM.calculator import GIICalculator
@@ -45,7 +46,7 @@ class BVMParameterizer():
         params = self.get_params_dict(x)
         GIIcalc = GIICalculator(params_dict=params)
         val = self.mean_GIIGS(GIIcalc)
-        print('Mean GIIGS: %s' % str(np.round(float(val), 3)))
+        #print('Mean GIIGS: %s' % str(np.round(float(val), 3)))
         return val
 
     def mean_Pearson(self, gii_calculator):
@@ -62,7 +63,7 @@ class BVMParameterizer():
         GIIcalc = GIICalculator(params_dict=params)
         pearson = self.mean_Pearson(GIIcalc)
         val = C - pearson
-        print('Mean pearson: %s' % str(np.round(float(pearson), 3)))
+        #print('Mean pearson: %s' % str(np.round(float(pearson), 3)))
         return val
 
     def optimization_function(self):
@@ -102,6 +103,9 @@ class BVMParameterizer():
         return opt_prob
 
     def optimizer(self, algo, kwargs=None, options=None):
+        comm = MPI.COMM_WORLD
+        rank = comm.Get_rank()
+
         ### Import and Initialize Optimizer ###
         try:
             'Note: pyOpt must be on PATH' 
@@ -139,7 +143,8 @@ class BVMParameterizer():
         
         ### Get Optimizer solution ###
         res = opt_prob.solution(0)
-        print(res)
+        if rank == 0:
+            print(res)
         vs = res.getVarSet()
         x = [np.round(vs[key].value, 3) for key in vs]
         new_params = deepcopy(self.starting_parameters)
