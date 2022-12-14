@@ -46,7 +46,6 @@ class BVMParameterizer():
         params = self.get_params_dict(x)
         GIIcalc = GIICalculator(params_dict=params)
         val = self.mean_GIIGS(GIIcalc)
-        #print('Mean GIIGS: %s' % str(np.round(float(val), 3)))
         return val
 
     def mean_Pearson(self, gii_calculator):
@@ -54,8 +53,9 @@ class BVMParameterizer():
         for cmpd in self.cmpds:
             giis = [gii_calculator.GII(s) for s in self.structures_and_energies[cmpd]['structures']]
             energies = self.structures_and_energies[cmpd]['energies']
-            pearson = pearsonr(giis, energies)[0]
-            Pearsons += pearson
+            if len(giis) > 1 and len(energies) > 1: # Pearsons of compositions with > 1 structure 
+                pearson = pearsonr(giis, energies)[0]
+                Pearsons += pearson
         return np.divide(Pearsons, len(self.cmpds))
 
     def mu_Pearson(self, x, C=0.75):
@@ -63,7 +63,6 @@ class BVMParameterizer():
         GIIcalc = GIICalculator(params_dict=params)
         pearson = self.mean_Pearson(GIIcalc)
         val = C - pearson
-        #print('Mean pearson: %s' % str(np.round(float(pearson), 3)))
         return val
 
     def optimization_function(self):
@@ -94,7 +93,7 @@ class BVMParameterizer():
 
         ### Add optimization variables ###
         for i in range(len(self.starting_parameters['Cation'])):
-            opt_prob.addVar('x'+str(i+1), 'c', lower=0.0, upper=4.0, value=self.starting_parameters['R0'][i])
+            opt_prob.addVar('x'+str(i+1), 'c', lower=1.0, upper=4.0, value=self.starting_parameters['R0'][i])
 
         ### Specify objective function and constraint(s) ###
         opt_prob.addObj('f')
