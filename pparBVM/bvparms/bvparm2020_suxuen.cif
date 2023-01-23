@@ -1,0 +1,2251 @@
+# ACCUMULATED TABLE OF BOND VALENCE PARAMETERS
+
+data_BOND_VALENCE_PARAMETERS_2020-11-25
+
+
+# BVPARM.CIF
+_audit_conform_dict_name        cif_core.dic
+_audit_conform_dict_version     2.2
+
+
+#***************************************************************
+# COPYRIGHT NOTICE
+# This table may be used and distributed without fee for
+# non-profit purposes providing 
+# 1) that this copyright notice is included and 
+# 2) no fee is charged for the table and 
+# 3) details of any changes made in this list by anyone other than
+# the copyright owner are suitably noted in the _audit_update record
+# Please consult the copyright owner regarding any other uses.
+#
+# The copyright is owned by I. David Brown, Brockhouse Institute for
+# Materials Research, McMaster University, Hamilton, Ontario Canada.
+# idbrown@mcmaster.ca
+#
+#*****************************DISCLAIMER************************
+#
+# The values reported here are taken from the literature and
+# other sources and the author does not warrant their correctness
+# nor accept any responsibility for errors.  Users are advised to
+# consult the primary sources. 
+#
+#***************************************************************
+#
+# The latest version of this file is available at:
+#
+# http://www.iucr.org/resources/data/datasets/bond-valence-parameters
+#
+# The parameters given in the main table are the values of Ro and
+# B used in the equation:
+#
+#     bond valence = exp((Ro-R)/B)
+#
+# where R is the bond length.  All values are in Angstrom units. 
+# Where significantly different values have been reported in the
+# literature, they are listed in decreasing order of reliability.
+#
+#     Bond valence parameters for atoms whose oxidation state is
+# given as 9 do not have an oxidation state
+# specified in the original paper.  They may apply to a
+# particular, but unspecified, oxidation state or they may be
+# intended to apply to all oxidation states.
+#
+#     The ammonium ion is listed under the symbol NH.
+#
+#     The list below is formatted and is designed to be read
+# either as a crystallographic information file (CIF) or as a
+# fixed format file once the text and associate data items 
+# have been stripped off. A question mark in the final column is
+# a place holder that indicates that there is no comment.
+#
+# Parameters marked at 'unchecked' are unreliable.
+####################################################################3
+
+_audit_creation_date         2001-02-21
+_audit_update_record         
+;2001-03-13 Ref m deleted.
+ 2001-06-01
+ 2001-06-21 new ref c and d added.
+ 2002-03-22 new ref q added
+ 2003-02-17 refs m, z and aa added
+ 2003-02-19 corrected CIF errors
+ 2004-08-12 correction of errors
+ 2006-05-02 refs ag to ai added
+ 2007-01-20 refs ag to am added
+ 2009-08-20 refs an to be added
+ 2011-06-01 refs bf to bh added
+ 2013-09-11 refs bi to bk added
+         correction of syntax errors, 
+         correcting Mo to Mn for parameters from ref. ap
+ 2016-10-28 refs bl to bs added
+ 2020-11-6  refs bs to bt added, some corrections made
+ 2020-11-25 corrections made
+;
+_audit_author_name           'I. David Brown'
+_audit_author_address
+;                            Brockhouse Institute for Materials Research
+                             McMaster University
+                             Hamilton, Ontario, Canada L8S 4M1
+;
+_audit_contact_author_name   'I. David Brown'
+_audit_contact_author_email  idbrown@mcmaster.ca  
+
+loop_
+     _valence_ref_id
+     _valence_ref_reference
+
+  a 'Brown and Altermatt, (1985), Acta Cryst. B41, 244-247 (empirical)'
+  b 'Brese and O'Keeffe, (1991), Acta Cryst. B47, 192-197 (extrapolated)'
+  c 'Adams, 2001, Acta Cryst. B57, 278-287 (includes second neighbours)'
+  d 'Hu et al. (1995) Inorg. Chim. Acta, 232, 161-165. '
+  e 'I.D.Brown Private communication'
+  f 'Brown et al. (1984) Inorg. Chem. 23, 4506-4508'
+  g 'Palenik (1997) Inorg. Chem. 36 4888-4890'
+  h 'Kanowitz and Palenik (1998) Inorg. Chem. 37 2086-2088'
+  i 'Wood and Palenik (1998) Inorg. Chem. 37 4149-4151'
+  j 'Liu and Thorp (1993) Inorg. Chem. 32 4102-4105'
+  k 'Palenik (1997) Inorg. Chem. 36 3394-3397'
+  l 'Shields, Raithby, Allen and Motherwell (2000) Acta Cryst.B56, 455-465' 
+  m 'Chen, Zhou and Hu (2002) Chinese Sci. Bul. 47, 978-980.'
+  n 'Kihlbourg (1963) Ark. Kemi 21 471-495; Schroeder 1975 Acta Cryst. B31, 2294'
+  o 'Allmann (1975) Monatshefte Chem. 106, 779'
+  p 'Zachariasen (1978) J.Less Common Metals 62, 1'
+  q 'Krivovichev and Brown (2001) Z. Krist. 216, 245'
+  r 'Burns, Ewing and Hawthorne (1997) Can. Miner. 35,1551-1570'
+  s 'Garcia-Rodriguez, et al. (2000) Acta Cryst. B56, 565-569'
+  t 'Mahapatra et al. (1996) J. Amer.Chem. Soc. 118, 11555'
+  u 'Wood and Palenik (1999) Inorg. Chem. 38, 1031-1034'
+  v 'Wood and Palenik (1999) Inorg. Chem. 38, 3926-3930'
+  w 'Wood, Abboud, Palenik and Palenik (2000) Inorg. Chem. 39, 2065-2068'
+  x 'Tytko, Mehnike and Kurad (1999) Structure and Bonding 93, 1-66'
+  y 'Gruendemann, et al.(1999) J. Phys. Chem. A 103, 4752-4754'
+  z 'Zocchi (2000) Solid State Sci. 2 383-387'
+ aa 'Jensen, Palenik and Tiekiak (2001) Polyhedron 20, 2137'
+ ab 'Roulhac and Palenik (2003) Inorg. Chem. 42, 118-121'
+ ac 'Holsa et al.(2002) J.Solid State Chem 165, 48-55'
+ ae 'Trzesowska, Kruszynski & Bartezak (2004) Acta Cryst. B60, 174-178'
+ af 'Locock & Burns (2004) Z.Krist. 219, 259-266'
+ ag 'Hu & Zhou (2004) Z. Krist. 219 614-620'
+ ah 'Trzesowska, Kruszynski & Bartczak (2005) Acta Cryst. B61 429-434'
+ ai 'Palenik (2003) Inorg. Chem. 42, 2725-2728'
+ aj 'Hong, Zhou & Hu (2004) Acta Chimica Sinica 62, 1733-1737'
+ ak 'Sidey (2006) Acta Cryst. B62, 949-951'
+ al 'Trzeowska, Kruszynski & Bartczak (2006) Acta Cryst. B62, 745-753'
+ am 'Malcherek & Schlueter (2007) Acta Cryst. B63, 157-160'
+ an 'Palenik, Abboud & Palenik (2005) Inorg. Chim. Acta 358, 1034'
+ ao 'Palenik (2006) Can. J. Chem. 84, 99'
+ ap 'Urusov (2006) Dokl. Phys. Chem. 408, 152'
+ aq 'Hu (2007) Acta Phys-Chim. Sin 23, 786-789'
+ ar '(=q)'
+ as 'Wester & Hess (2005) Inorg. Chim. Acta 358, 865-874'
+ at 'Urusov (2006) Dokl. Phys-Chem. 408, 169-174'
+ au 'Yu & Xue (2006) Acta Cryst. B62, 702'
+ av 'Henke (2007) Z. Krist. 222, 477-486'
+ aw 'Sidey, Milyan, Semrad & Solomon (2008) J. Alloys Compds. 457, 480'
+ ax 'Adams, Moretsky & Canadell (2004) Solid State Ionics, 168, 281'
+ ay 'Cabana et al. (2004) Inorg. Chem. 43, 7050'
+ az 'Grabowski (2000) J. Mol. Struct. 552, 153'
+ ba 'Yu, Xue & Ratajczak (2006) Physica B371, 170'
+ bb 'Majerz & Olovsson (2007) Acta Cryst. B63, 650'
+ bc 'Brown (2002) The Chemical Bond in Inorganic Chemistry, OUP, p.230'
+ bd 'Sidey (2009) Acta Cryst, B65, 99-101'
+ be 'Mills, Christy, Chen & Raudsepp, (2009) Z. Krist. 224, 423-431'
+ bf 'Diwu, et al. (2010) Inorg Chem. 49 3337-3342'
+ bg 'Sidey (2010) Acta Cryst. B66, 307-314'
+ bh 'Brown (2009) Acta Cryst. B65, 684-693'
+ bi 'Sidey (2012) Private communication'
+ bj 'Krivovichev (2012) Z. Krist. 227, 575-579'
+ bk 'Mills & Christy (2013) Acta Cryst. B69, 145-149'
+ bl 'Palenik & Hu (2009) Inorg. Chim. Acta 362, 4740-4743'
+ bm 'Palenik & Hu (2011) Chinese J. Struct. Chem. 30, 1820-1826'
+ bn 'Hu, Xie & Palenik (2012) Acta Phys-Chim. Sin. 28, 19-24'
+ bo 'Nyman, Rodriguez & Campana (2010) Inorg. Chem. 49, 7748-7755'
+ bp 'Sidey, Zubaka, Stercho & Peresh (2010) Chem. Metals Alloys 3, 108-114'
+ bq 'Hu ShengZhi (2014) to be published'
+ br 'Czervinska, Madura, Zachara (2016) Acta Cryst. B72, 241-248'
+ bs 'Gagne & Hawthorne (2015) Acta Cryst. B71, 561-578'
+ bt 'Yee, Suesdn & Rbuffetti (2018) J.Solid State Chem. 270, 242-246.'
+ bu  'Zheng et al. (2017) Acta Cryst. D73, 316-125'
+ bv  'Sdidey & Shteyfan (2017) J. Phys. Chem. Solids, 103, 73-75.'
+
+loop_
+   _valence_param_atom_1
+   _valence_param_atom_1_valence
+   _valence_param_atom_2
+   _valence_param_atom_2_valence
+   _valence_param_Ro
+   _valence_param_B
+   _valence_param_ref_id
+   _valence_param_details
+
+Ac 3   O  -2    2.240    0.370    b   ?
+Ac 3   O  -2    2.290    0.350    p   ?
+Ac 3   F  -1    2.130    0.370    b   ?
+Ac 3   F  -1    2.100    0.400    p   ?
+Ac 3   Cl -1    2.630    0.370    b   ?
+Ac 3   Cl -1    2.600    0.400    p   ?
+Ac 3   Br -1    2.750    0.400    p   ?
+Ag 1   O  -2    1.842    0.370    a   ?
+Ag 1   O  -2    1.875    0.359    bs  ?
+Ag 1   O  -2    1.805    0.370    b   ?
+Ag 1   S  -2    2.119    0.370    a   ?
+Ag 1   F  -1    1.800    0.370    b   ?
+Ag 1   Cl -1    2.090    0.370    b   ?
+Ag 2   F  -1    1.790    0.370    e   unchecked
+Ag 3   F  -1    1.830    0.370    e   unchecked
+Ag 9   Br -1    2.220    0.370    b   ?
+Ag 9   I  -1    2.380    0.370    b   ?
+Ag 9   Se -2    2.260    0.370    b   ?
+Ag 9   Te -2    2.510    0.370    b   ?
+Ag 9   N  -3    1.850    0.370    b   ?
+Ag 9   P  -3    2.220    0.370    b   ?
+Ag 9   As -3    2.300    0.370    b   ?
+Ag 9   H  -1    1.500    0.370    b   ?
+Al 3   O  -2    1.651    0.370    a   ?
+Al 3   O  -2    1.634    0.390    bs  ?
+Al 3   O  -2    1.644    0.380    o   ?
+Al 3   S  -2    2.210    0.370    e   unchecked
+Al 3   S  -2    2.130    0.370    b   ?
+Al 3   Se -2    2.270    0.370    b   ?
+Al 3   Te -2    2.480    0.370    b   ?
+Al 3   F  -1    1.545    0.370    a   ?
+Al 3   Cl -1    2.032    0.370    a   ?
+Al 3   Br -1    2.200    0.370    b   ?
+Al 3   I  -1    2.410    0.370    b   ?
+Al 3   N  -3    1.790    0.370    b   ?
+Al 3   P  -3    2.240    0.370    b   ?
+Al 3   As -3    2.300    0.370    b   ?
+Al 3   H  -1    1.450    0.370    b   ?
+Am 3   O  -2    2.110    0.370    b   ?
+Am 3   O  -2    2.068    0.392    bs  'sample
+Am 3   O  -2    2.130    0.350    p   ?
+Am 3   F  -1    2.000    0.370    b   ?
+Am 3   F  -1    1.980    0.400    p   ?
+Am 3   Cl -1    2.480    0.370    b   ?
+Am 3   Cl -1    2.450    0.400    p   ?
+Am 3   Br -1    2.590    0.400    p   ?
+Am 4   O  -2    2.080    0.370    p   ?
+Am 4   O  -2    2.120    0.370    e   unchecked
+Am 4   F  -1    1.960    0.400    p   ?
+Am 5   O  -2    2.070    0.350    p   ?
+Am 5   F  -1    1.950    0.400    p   ?
+Am 6   O  -2    2.050    0.350    p   ?
+Am 6   F  -1    1.950    0.400    p   ?
+Am 5   O  -2    2.120    0.370    e   unchecked
+As 2   S  -2    2.240    0.370    e   unchecked
+As 2   Se -2    2.380    0.370    e   unchecked
+As 3   O  -2    1.740    0.500    e   ?
+As 3   O  -2    1.775    0.423    bs  ?
+As 3   O  -2    1.789    0.370    a   ?
+As 3   S  -2    2.272    0.370    a   ?
+As 3   Se -2    2.400    0.370    e   unchecked
+As 3   Te -2    2.650    0.370    e   unchecked
+As 3   F  -1    1.700    0.370    b   ?
+As 3   Cl -1    2.160    0.370    b   ?
+As 3   Br -1    2.350    0.370    e   unchecked
+As 3   I  -1    2.580    0.370    e   unchecked
+As 3   C  -4    1.930    0.370    b   ?
+As 5   O  -2    1.767    0.370    a   ?
+As 5   O  -2    1.765    0.352    bs  ?
+As 5   S  -2    2.280    0.370    e   unchecked
+As 5   F  -1    1.620    0.370    a   ?
+As 5   Cl -2    2.140    0.370    b   ?
+Au 1   Cl -1    2.020    0.370    e   unchecked
+Au 1   I  -1    2.350    0.370    e   unchecked
+Au 3   O  -2    1.890    0.370    e   ?
+Au 3   O  -2    1.833    0.370    b   ?
+Au 3   O  -2    1.890    0.375    bs  'B
+Au 3   S  -2    2.390    0.350    e   unchecked
+Au 3   F  -1    1.890    0.370    e   unchecked
+Au 3   F  -1    1.810    0.370    b   ?
+Au 3   Cl -1    2.170    0.370    b   ?
+Au 3   Br -1    2.320    0.370    e   unchecked
+Au 3   I  -1    2.540    0.370    e   unchecked
+Au 3   N  -3    1.940    0.350    e   unchecked
+Au 5   F  -1    1.800    0.370    e   unchecked
+Au 9   S  -2    2.030    0.370    b   ?
+Au 9   Se -2    2.180    0.370    b   ?
+Au 9   Te -2    2.410    0.370    b   ?
+Au 9   Br -1    2.120    0.370    b   ?
+Au 9   I  -1    2.340    0.370    b   ?
+Au 9   N  -3    1.720    0.370    b   ?
+Au 9   P  -3    2.140    0.370    b   ?
+Au 9   As -3    2.220    0.370    b   ?
+Au 9   H  -1    1.370    0.370    b   ?
+B  3   O  -2    1.371    0.370    a   ?
+B  3   O  -2    1.372    0.357    bs  ?
+B  3   O  -2    1.364    0.370    br  ?
+B  3   S  -2    1.815    0.370    au  ?
+B  3   S  -2    1.820    0.370    b   ?
+B  3   Se -2    1.950    0.370    b   ?
+B  3   Te -2    2.200    0.370    b   ?
+B  3   F  -1    1.281    0.370    a   ?
+B  3   F  -1    1.289    0.370    au  ?
+B  3   F  -1    1.310    0.370    b   ?
+B  3   Cl -1    1.740    0.370    b   ?
+B  3   Br -1    1.880    0.370    b   ?
+B  3   I  -1    2.100    0.370    b   ?
+B  3   N  -3    1.482    0.370    au  ?
+B  3   N  -3    1.470    0.370    b   ?
+B  3   P  -3    1.920    0.370    au  ?
+B  3   P  -3    1.880    0.370    b   ?
+B  3   As -3    1.970    0.370    b   ?
+B  3   H  -1    1.140    0.370    b   ?
+B  3   C  -4    1.569    0.280    br  ?
+B  3   B   3    1.402    0.370    e   unchecked
+Ba 2   O  -2    2.285    0.370    a   ?
+Ba 2   O  -2    2.265    0.370    bt  'Organic
+Ba 2   O  -2    2.223    0.406    bs  ?
+Ba 2   S  -2    2.769    0.370    a   ?
+Ba 2   Se -2    2.880    0.370    b   ?
+Ba 2   Te -2    3.080    0.370    b   ?
+Ba 2   F  -1    2.188    0.370    a   ?
+Ba 2   Cl -1    2.690    0.370    b   ?
+Ba 2   Br -1    2.880    0.370    b   ?
+Ba 2   I  -1    3.130    0.370    b   ?
+Ba 2   N  -3    2.470    0.370    b   ?
+Ba 2   P  -3    2.880    0.370    b   ?
+Ba 2   As -3    2.960    0.370    b   ?
+Ba 2   H  -1    2.220    0.370    b   ?
+Be 2   O  -2    1.381    0.370    a   ?
+Be 2   O  -2    1.429    0.297    bs  ?
+Be 2   S  -2    1.830    0.370    b   ?
+Be 2   Se -2    1.970    0.370    b   ?
+Be 2   Te -2    2.210    0.370    b   ?
+Be 2   F  -1    1.281    0.370    a   ?
+Be 2   Cl -1    1.760    0.370    b   ?
+Be 2   Br -1    1.900    0.370    b   ?
+Be 2   I  -1    2.100    0.370    b   ?
+Be 2   N  -3    1.500    0.370    b   ?
+Be 2   P  -3    1.950    0.370    b   ?
+Be 2   As -3    2.000    0.370    b   ?
+Be 2   H  -1    1.110    0.370    b   ?
+Bi 3   O  -2    1.990    0.480    bj  ?
+Bi 3   O  -2    2.068    0.389    bs  ?
+Bi 3   O  -2    2.094    0.370    a   ?
+Bi 3   S  -2    2.570    0.370    a   ?
+Bi 3   Se -2    2.700    0.350    e   unchecked
+Bi 3   F  -1    1.990    0.370    b   ?
+Bi 3   Cl -1    2.480    0.370    b   ?
+Bi 3   Cl -1    2.400    0.370    e   unchecked
+Bi 3   Br -1    2.597    0.370    ak  ?
+Bi 3   Br -1    2.567    0.421    ak  'R0
+Bi 3   I  -1    2.820    0.370    e   unchecked
+Bi 3   N  -3    2.020    0.350    e   unchecked
+Bi 5   O  -2    2.060    0.370    b   ?
+Bi 5   O  -2    2.050    0.318    bs  ?
+Bi 5   F  -1    1.970    0.370    b   ?
+Bi 5   Cl -1    2.440    0.370    b   ?
+Bi 9   Br -1    2.620    0.370    b   ?
+Bi 9   I  -1    2.840    0.370    b   ?
+Bi 9   S  -2    2.550    0.370    b   ?
+Bi 9   Se -2    2.720    0.370    b   ?
+Bi 9   Te -2    2.870    0.370    b   ?
+Bi 9   N  -3    2.240    0.370    b   ?
+Bi 9   P  -3    2.630    0.370    b   ?
+Bi 9   As -3    2.720    0.370    b   ?
+Bi 9   H  -1    1.970    0.370    b   ?
+Bk 3   O  -2    2.080    0.370    b   ?
+Bk 3   O  -2    2.100    0.350    p   ?
+Bk 3   F  -1    1.960    0.370    b   ?
+Bk 3   F  -1    1.950    0.400    p   ?
+Bk 3   Cl -1    2.350    0.370    e   unchecked
+Bk 3   Cl -1    2.460    0.370    b   ?
+Bk 3   Cl -1    2.420    0.400    p   ?
+Bk 3   Br -1    2.560    0.400    p   ?
+Bk 4   O  -2    2.070    0.350    p   ?
+Bk 4   F  -1    1.930    0.400    p   ?
+Br 3   O  -2    1.900    0.370    e   unchecked
+Br 3   F  -1    1.750    0.370    e   unchecked
+Br 5   O  -2    1.890    0.571    bs  'Smal
+Br 5   O  -2    1.840    0.370    e   unchecked
+Br 5   F  -1    1.760    0.370    e   unchecked
+Br 7   O  -2    1.810    0.370    b   ?
+Br 7   O  -2    1.850    0.428    bs  'sample
+Br 7   F  -1    1.720    0.370    b   ?
+Br 7   Cl -1    2.190    0.370    b   ?
+C  2   O  -2    1.366    0.370    e   unchecked
+C  2   Cl -1    1.410    0.370    e   unchecked
+C  4   O  -2    1.390    0.370    a   ?
+C  4   O  -2    1.398    0.399    bs  'B
+C  4   O  -2    1.407    0.370    au  'small
+C  4   O  -2    1.400    0.260    o   ?
+C  4   C   4    1.540    0.370    e   ?
+C  4   S  -2    1.800    0.370    e   unchecked
+C  4   F  -1    1.320    0.370    b   ?
+C  4   F  -1    1.410    0.370    e   unchecked
+C  4   Cl -1    1.760    0.370    b   ?
+C  4   Br -1    1.910    0.370    e   unchecked
+C  4   N  -3    1.442    0.370    a   ?
+C  9   Se -2    1.970    0.370    b   ?
+C  9   I  -1    2.120    0.370    b   ?
+C  9   Br -1    1.900    0.370    b   ?
+C  9   S  -2    1.820    0.370    b   ?
+C  9   Te -2    2.210    0.370    b   ?
+C  9   N  -3    1.470    0.370    b   ?
+C  9   P  -3    1.890    0.370    b   ?
+C  9   As -3    1.990    0.370    b   ?
+C  9   H  -1    1.100    0.370    b   ?
+Ca 2   O  -2    1.967    0.370    a   ?
+Ca 2   O  -2    1.930    0.370    bu  ?
+Ca 2   O  -2    1.933    0.370    bt  'Organic
+Ca 2   O  -2    1.907    0.409    bs  ?
+Ca 2   O  -2    1.896    0.410    o   ?
+Ca 2   S  -2    2.450    0.370    b   ?
+Ca 2   Se -2    2.560    0.370    b   ?
+Ca 2   Te -2    2.760    0.370    b   ?
+Ca 2   F  -1    1.842    0.370    a   ?
+Ca 2   F  -1    1.870    0.370    bu  ?
+Ca 2   Cl -1    2.370    0.370    b   ?
+Ca 2   Br -1    2.510    0.370    bu  ?
+Ca 2   Br -1    2.490    0.370    b   ?
+Ca 2   I  -1    2.720    0.370    b   ?
+Ca 2   N  -3    2.140    0.370    b   ?
+Ca 2   N  -3    2.070    0.370    bu  ?
+Ca 2   P  -3    2.550    0.370    b   ?
+Ca 2   As -3    2.620    0.370    b   ?
+Ca 2   H  -1    1.830    0.370    b   ?
+Cd 2   O  -2    1.904    0.370    a   ?
+Cd 2   O  -2    1.827    0.430    bs  ?
+Cd 2   O  -2    1.875    0.370    ao  ?
+Cd 2   S  -2    2.304    0.370    a   ?
+Cd 2   S  -2    2.279    0.370    ao  ?
+Cd 2   Se -2    2.400    0.370    b   ?
+Cd 2   Te -2    2.590    0.370    b   ?
+Cd 2   F  -1    1.811    0.370    b   ?
+Cd 2   Cl -1    2.212    0.370    a   ?
+Cd 2   Cl -1    2.230    0.370    b   ?
+Cd 2   Cl -1    2.220    0.370    ao  ?
+Cd 2   Br -1    2.334    0.370    ao  ?
+Cd 2   Br -1    2.350    0.370    b   ?
+Cd 2   I  -1    2.525    0.370    ao  ?
+Cd 2   I  -1    2.570    0.370    b   ?
+Cd 2   I  -1    2.600    0.370    e   unchecked
+Cd 2   N  -3    1.960    0.370    b   ?
+Cd 2   N  -3    1.951    0.370    ao  ?
+Cd 2   P  -3    2.340    0.370    b   ?
+Cd 2   As -3    2.430    0.370    b   ?
+Cd 2   H  -1    1.660    0.370    b   ?
+Ce 3   O  -2    2.151    0.370    b   ?
+Ce 3   O  -2    2.114    0.389    bs  ?
+Ce 3   O  -2    2.118    0.370    bl  'in
+Ce 3   O  -2    2.121    0.370    ab  'in
+Ce 3   O  -2    2.116    0.370    ae  'in
+Ce 3   S  -2    2.602    0.370    al  ?
+Ce 3   S  -2    2.650    0.370    e   unchecked
+Ce 3   F  -1    2.036    0.370    b   ?
+Ce 3   F  -1    2.251    0.370    bl  'in
+Ce 3   F  -1    2.000    0.400    p   ?
+Ce 3   Cl -1    2.520    0.370    b   ?
+Ce 3   Cl -1    2.490    0.400    p   ?
+Ce 3   Cl -1    2.540    0.370    al  ?
+Ce 3   Br -1    2.650    0.350    e   ?
+Ce 3   Br -1    2.650    0.400    p   ?
+Ce 3   I  -1    2.870    0.400    p   ?
+Ce 4   O  -2    2.028    0.370    b   ?
+Ce 4   O  -2    2.046    0.416    bs  ?
+Ce 4   O  -2    2.070    0.370    bl  'in
+Ce 4   O  -2    2.068    0.370    ab  'in
+Ce 4   O  -2    2.074    0.370    al  ?
+Ce 4   S  -2    2.650    0.350    e   unchecked
+Ce 4   F  -1    1.995    0.370    b   ?
+Ce 4   F  -1    1.970    0.400    p   ?
+Ce 4   N  -3    2.179    0.370    al  ?
+Ce 4   N  -3    2.202    0.370    bl  'in
+Ce 9   Cl -1    2.410    0.370    b   ?
+Ce 9   Br -1    2.690    0.370    b   ?
+Ce 9   I  -1    2.920    0.370    b   ?
+Ce 9   S  -2    2.620    0.370    b   ?
+Ce 9   Se -2    2.740    0.370    b   ?
+Ce 9   Te -2    2.920    0.370    b   ?
+Ce 9   N  -3    2.254    0.370    ah  ?
+Ce 9   N  -3    2.340    0.370    b   ?
+Ce 9   P  -3    2.700    0.370    b   ?
+Ce 9   As -3    2.780    0.370    b   ?
+Ce 9   H  -1    2.040    0.370    b   ?
+Cf 3   O  -2    2.070    0.370    b   ?
+Cf 3   F  -1    1.950    0.370    b   ?
+Cf 3   F  -1    1.940    0.400    p   ?
+Cf 3   Cl -1    2.450    0.370    b   ?
+Cf 3   Cl -1    2.410    0.400    p   ?
+Cf 3   Br -1    2.550    0.400    p   ?
+Cf 4   O  -2    2.060    0.350    p   ?
+Cf 4   F  -1    1.920    0.400    p   ?
+Cl 3   O  -2    1.722    0.370    bs  'Small
+Cl 3   O  -2    1.710    0.370    e   unchecked
+Cl 3   F  -1    1.690    0.370    e   unchecked
+Cl 5   O  -2    1.703    0.428    bs  'Small
+Cl 5   O  -2    1.670    0.370    e   unchecked
+Cl 7   O  -2    1.632    0.370    a   ?
+Cl 7   O  -2    1.669    0.428    bs  ?
+Cl 7   F  -1    1.550    0.370    b   ?
+Cl 7   Cl -1    2.000    0.370    b   ?
+Cf 3   Cl -1    2.450    0.370    b   ?
+Cm 3   O  -2    2.230    0.370    b   ?
+Cm 3   O  -2    2.034    0.412    bs  'sample
+Cm 3   O  -2    2.120    0.350    p   ?
+Cm 3   F  -1    2.120    0.370    b   ?
+Cm 3   F  -1    1.960    0.400    p   ?
+Cm 3   Cl -1    2.620    0.370    b   ?
+Cm 3   Cl -1    2.440    0.400    p   ?
+Cm 4   O  -2    2.080    0.350    p   ?
+Cm 4   F  -1    1.940    0.400    p   ?
+Co 1   H  -1    1.000    0.350    e   unchecked
+Co 2   O  -2    1.692    0.370    a   ?
+Co 2   O  -2    1.698    0.376    bs  ?
+Co 2   O  -2    1.685    0.370    i   'from
+Co 2   S  -2    1.940    0.370    e   unchecked
+Co 2   F  -1    1.640    0.370    b   ?
+Co 2   Cl -1    2.033    0.370    a   ?
+Co 2   Cl -1    2.010    0.370    b   ?
+Co 2   N  -3    1.720    0.370    bq  'high
+Co 2   N  -3    1.600    0.370    bq  'low
+Co 3   O  -2    1.637    0.370    i   'from
+Co 3   O  -2    1.655    0.364    bs  'Ro
+Co 3   O  -2    1.700    0.370    b   ?
+Co 3   S  -2    2.020    0.370    e   unchecked
+Co 3   F  -1    1.620    0.370    b   ?
+Co 3   Cl -1    2.050    0.370    b   ?
+Co 3   N  -3    1.690    0.370    bq  'low
+Co 3   C   2    1.634    0.370    b   ?
+Co 4   O  -2    1.729    0.358    bs  'sample
+Co 4   O  -2    1.720    0.370    e   unchecked
+Co 4   F  -1    1.550    0.370    e   unchecked
+Co 9   O  -2    1.655    0.420    o   ?
+Co 9   Br -1    2.180    0.370    b   ?
+Co 9   I  -1    2.370    0.350    b   ?
+Co 9   S  -2    2.060    0.370    b   ?
+Co 9   Se -2    2.240    0.370    b   ?
+Co 9   Te -2    2.460    0.370    b   ?
+Co 9   N  -3    1.840    0.370    b   ?
+Co 9   P  -3    2.210    0.370    b   ?
+Co 9   As -3    2.280    0.370    b   ?
+Co 9   H  -1    1.440    0.370    b   ?
+Cr 2   O  -2    1.761    0.350    bs  ?
+Cr 2   O  -2    1.730    0.370    b   ?
+Cr 2   F  -1    1.670    0.370    b   ?
+Cr 2   F  -1    1.740    0.370    e   unchecked
+Cr 2   Cl -1    2.090    0.370    b   ?
+Cr 2   Br -1    2.260    0.370    e   unchecked
+Cr 2   I  -1    2.480    0.370    e   unchecked
+Cr 2   N  -3    1.800    0.370    bq  'low
+Cr 2   N  -3    1.860    0.370    bq  'high
+Cr 3   O  -2    1.724    0.370    a   ?
+Cr 3   O  -2    1.725    0.361    bs  'Ro
+Cr 3   O  -2    1.708    0.370    w   'from
+Cr 3   S  -2    2.162    0.370    e   unchecked
+Cr 3   F  -1    1.657    0.370    a   ?
+Cr 3   F  -1    1.640    0.370    b   ?
+Cr 3   Cl -1    2.080    0.370    b   ?
+Cr 3   Br -1    2.280    0.370    e   unchecked
+Cr 3   N  -3    1.780    0.370    bq  'high
+Cr 4   O  -2    1.783    0.410    bs  'Small
+Cr 4   O  -2    1.810    0.370    e   unchecked
+Cr 4   F  -1    1.560    0.370    e   unchecked
+Cr 5   O  -2    1.760    0.370    w   'from
+Cr 5   O  -2    1.777    0.375    bs  'Sample
+Cr 6   O  -2    1.794    0.370    a   ?
+Cr 6   O  -2    1.799    0.375    bs  'B
+Cr 6   F  -1    1.740    0.370    b   ?
+Cr 6   Cl -1    2.120    0.370    b   ?
+Cr 9   O  -2    1.790    0.340    o   ?
+Cr 9   O  -2    1.724    0.370    w   'from
+Cr 9   Br -1    2.260    0.370    b   ?
+Cr 9   I  -1    2.450    0.370    b   ?
+Cr 9   S  -2    2.180    0.370    b   ?
+Cr 9   Se -2    2.290    0.370    b   ?
+Cr 9   Te -2    2.520    0.370    b   ?
+Cr 9   N  -3    1.850    0.370    b   ?
+Cr 9   P  -3    2.270    0.370    b   ?
+Cr 9   As -3    2.340    0.370    b   ?
+Cr 9   H  -1    1.520    0.370    b   ?
+Cs 1   O  -2    2.417    0.370    a   ?
+Cs 1   O  -2    2.412    0.370    bt  'organic
+Cs 1   O  -2    2.296    0.411    bs  ?
+Cs 1   O  -2    2.286    0.408    c   '7
+Cs 1   S  -2    2.890    0.370    b   ?
+Cs 1   S  -2    2.525    0.517    c   '7
+Cs 1   S  -2    2.930    0.370    e   unchecked
+Cs 1   Se -2    2.980    0.370    b   ?
+Cs 1   Se -2    2.642    0.553    c   '7
+Cs 1   Te -2    3.160    0.370    b   ?
+Cs 1   Te -2    2.765    0.603    c   '8
+Cs 1   F  -1    2.330    0.370    b   ?
+Cs 1   F  -1    2.198    0.410    c   '7
+Cs 1   F  -1    2.380    0.370    e   unchecked
+Cs 1   Cl -1    2.791    0.370    a   ?
+Cs 1   Cl -1    2.471    0.495    c   '7
+Cs 1   Br -1    2.950    0.370    b   ?
+Cs 1   Br -1    2.503    0.543    c   '7
+Cs 1   I  -1    3.180    0.370    b   ?
+Cs 1   I  -1    2.693    0.609    c   '8
+Cs 1   I  -1    3.290    0.370    e   unchecked
+Cs 1   N  -3    2.830    0.370    e   unchecked
+Cs 1   N  -3    2.530    0.370    b   ?
+Cs 1   P  -3    2.930    0.370    b   ?
+Cs 1   As -3    3.040    0.370    b   ?
+Cs 1   H  -1    2.440    0.370    b   ?
+Cu 1   O  -2    1.610    0.370    e   unchecked
+Cu 1   O  -2    1.601    0.335    bs  ?
+Cu 1   O  -2    1.504    0.370    l   'from
+Cu 1   S  -2    1.898    0.370    a   ?
+Cu 1   S  -2    1.811    0.370    l   'from
+Cu 1   Se -2    1.900    0.370    l   'from
+Cu 1   F  -1    1.600    0.370    b   ?
+Cu 1   Cl -1    1.858    0.370    l   'from
+Cu 1   Cl -1    1.890    0.370    e   unchecked
+Cu 1   Br -1    2.030    0.370    e   unchecked
+Cu 1   I  -1    2.108    0.370    a   ?
+Cu 1   I  -1    2.155    0.370    l   'from
+Cu 1   N  -3    1.520    0.370    l   '3-coordinate
+Cu 1   N  -3    1.480    0.370    l   '2-coordinate
+Cu 1   N  -3    1.630    0.370    l   '4-coordinate
+Cu 1   P  -3    1.774    0.370    l   'from
+Cu 1   As -3    1.856    0.370    l   'from
+Cu 1   C  -4    1.446    0.370    l   'from
+Cu 2   O  -2    1.679    0.360    bj  ?
+Cu 2   O  -2    1.687    0.355    bs  ?
+Cu 2   O  -2    1.679    0.370    a   ?
+Cu 2   O  -2    1.649    0.370    j   'from
+Cu 2   O  -2    1.655    0.370    l   'from
+Cu 2   S  -2    2.054    0.370    a   ?
+Cu 2   S  -2    2.060    0.370    j   'from
+Cu 2   S  -2    2.024    0.370    l   'from
+Cu 2   S  -2    1.860    0.370    b   ?
+Cu 2   Se -2    2.020    0.370    b   ?
+Cu 2   Se -2    2.124    0.370    l   ?
+Cu 2   Te -2    2.270    0.370    b   ?
+Cu 2   F  -1    1.594    0.370    a   ?
+Cu 2   Cl -1    2.000    0.370    b   ?
+Cu 2   Br -1    1.990    0.370    b   ?
+Cu 2   Br -1    2.134    0.370    l   'from
+Cu 2   I  -1    2.160    0.370    b   ?
+Cu 2   I  -1    2.360    0.370    l   'from
+Cu 2   N  -3    1.751    0.370    j   'from
+Cu 2   N  -3    1.713    0.370    l   'from
+Cu 2   N  -3    1.610    0.370    b   ?
+Cu 2   N  -3    1.709    0.370    l   '2-coordinate
+Cu 2   N  -3    1.704    0.370    l   '3-coordinate
+Cu 2   N  -3    1.763    0.370    l   '4-coordinate
+Cu 2   P  -3    1.970    0.370    b   ?
+Cu 2   P  -3    2.050    0.370    l   'from
+Cu 2   As -3    2.080    0.370    b   ?
+Cu 2   C  -4    1.720    0.370    l   'from
+Cu 2   H  -1    1.210    0.370    b   ?
+Cu 3   O  -2    1.735    0.370    t   ?
+Cu 3   O  -2    1.737    0.375    bs  'B
+Cu 3   O  -2    1.739    0.370    e   unchecked
+Cu 3   F  -1    1.580    0.370    e   unchecked
+Cu 3   Cl -1    2.078    0.370    l   'from
+Cu 3   N  -3    1.768    0.370    l   'from
+Cu 3   N  -3    1.753    0.370    t   ?
+Cu 3   C  -4    1.840    0.370    l   'from
+Dy 2   O  -2    1.900    0.370    e   unchecked
+Dy 3   O  -2    2.001    0.370    a   ?
+Dy 3   O  -2    2.002    0.389    bs  ?
+Dy 3   O  -2    2.005    0.370    ae  'from
+Dy 3   F  -1    1.922    0.370    b   ?
+Dy 3   F  -1    1.890    0.400    p   ?
+Dy 3   Cl -1    2.410    0.370    b   ?
+Dy 3   Cl -1    2.380    0.400    p   ?
+Dy 3   Cl -1    2.407    0.370    al  ?
+Dy 3   Br -1    2.530    0.400    p   ?
+Dy 3   I  -1    2.760    0.400    p   ?
+Dy 9   Br -1    2.560    0.370    b   ?
+Dy 9   I  -1    2.770    0.370    b   ?
+Dy 9   S  -2    2.470    0.370    b   ?
+Dy 9   S  -2    2.473    0.370    al  ?
+Dy 9   Se -2    2.610    0.370    b   ?
+Dy 9   Te -2    2.800    0.370    b   ?
+Dy 9   N  -3    2.124    0.370    ah  ?
+Dy 9   N  -3    2.180    0.370    b   ?
+Dy 9   P  -3    2.570    0.370    b   ?
+Dy 9   As -3    2.640    0.370    b   ?
+Dy 9   H  -1    1.890    0.370    b   ?
+Er 2   O  -2    1.880    0.370    e   unchecked
+Er 2   S  -2    2.520    0.370    e   unchecked
+Er 3   O  -2    1.988    0.370    a   ?
+Er 3   O  -2    1.991    0.373    bs  ?
+Er 3   O  -2    2.010    0.370    b   ?
+Er 3   O  -2    1.979    0.370    ae  'from
+Er 3   S  -2    2.475    0.370    al  ?
+Er 3   Se -2    2.580    0.370    e   unchecked
+Er 3   F  -1    1.904    0.370    a   ?
+Er 3   F  -1    1.870    0.400    p   ?
+Er 3   Cl -1    2.390    0.370    b   ?
+Er 3   Cl -1    2.385    0.370    al  ?
+Er 3   Cl -1    2.360    0.400    p   ?
+Er 3   Br -1    2.510    0.400    p   ?
+Er 3   I  -1    2.750    0.400    p   ?
+Er 9   Br -1    2.540    0.370    b   ?
+Er 9   I  -1    2.750    0.370    b   ?
+Er 9   S  -2    2.460    0.370    b   ?
+Er 9   Se -2    2.590    0.370    b   ?
+Er 9   Te -2    2.780    0.370    b   ?
+Er 9   N  -3    2.086    0.370    ah  ?
+Er 9   N  -3    2.160    0.370    b   ?
+Er 9   P  -3    2.550    0.370    b   ?
+Er 9   As -3    2.630    0.370    b   ?
+Er 9   H  -1    1.860    0.370    b   ?
+Es 3   O  -2    2.080    0.350    p   ?
+Eu 2   O  -2    2.147    0.370    b   ?
+Eu 2   O  -2    2.102    0.370    al  ?
+Eu 2   O  -2    1.943    0.490    bs  'small
+Eu 2   S  -2    2.584    0.370    a   ?
+Eu 2   F  -1    2.040    0.370    b   ?
+Eu 2   Cl -1    2.530    0.370    b   ?
+Eu 2   Br -1    2.670    0.370    e   unchecked
+Eu 2   I  -1    2.900    0.370    e   unchecked
+Eu 2   N  -3    2.160    0.370    al  ?
+Eu 3   O  -2    2.074    0.370    a   ?
+Eu 3   O  -2    2.068    0.359    bs  ?
+Eu 3   O  -2    2.038    0.370    ae  'from
+Eu 3   S  -2    2.509    0.370    al  ?
+Eu 3   F  -1    1.961    0.370    b   ?
+Eu 3   F  -1    1.930    0.400    p   ?
+Eu 3   Cl -1    2.455    0.370    b   ?
+Eu 3   Cl -1    2.468    0.370    al  ?
+Eu 3   Cl -1    2.420    0.400    p   ?
+Eu 3   Br -1    2.570    0.400    p   ?
+Eu 3   I  -1    2.790    0.400    p   ?
+Eu 9   Br -1    2.610    0.370    b   ?
+Eu 9   I  -1    2.830    0.370    b   ?
+Eu 9   S  -2    2.530    0.370    b   ?
+Eu 9   Se -2    2.660    0.370    b   ?
+Eu 9   Te -2    2.850    0.370    b   ?
+Eu 9   N  -3    2.161    0.370    ah  ?
+Eu 9   N  -3    2.240    0.370    b   ?
+Eu 9   P  -3    2.620    0.370    b   ?
+Eu 9   As -3    2.700    0.370    b   ?
+Eu 9   H  -1    1.950    0.370    b   ?
+Fe 2   O  -2    1.734    0.370    a   ?
+Fe 2   O  -2    1.658    0.447    bs  ?
+Fe 2   O  -2    1.713    0.370    h   ?
+Fe 2   O  -2    1.700    0.370    j   ?
+Fe 2   S  -2    2.120    0.370    e   unchecked
+Fe 2   S  -2    2.125    0.370    j   'from
+Fe 2   F  -1    1.650    0.370    b   ?
+Fe 2   Cl -1    2.060    0.370    b   ?
+Fe 2   Cl -1    2.050    0.370    bu  ?
+Fe 2   Br -1    2.210    0.370    bu  ?
+Fe 2   I  -1    2.470    0.350    e   ?
+Fe 2   N  -3    1.760    0.370    bq  'high
+Fe 2   N  -3    1.660    0.370    bq  'intermediate
+Fe 2   N  -3    1.560    0.370    bq  'low
+Fe 2   N  -3    1.769    0.370    j   'from
+Fe 3   O  -2    1.759    0.370    a   ?
+Fe 3   O  -2    1.766    0.360    bs  ?
+Fe 3   O  -2    1.751    0.370    h   'from
+Fe 3   O  -2    1.765    0.370    j   'from
+Fe 3   S  -2    2.149    0.370    a   ?
+Fe 3   S  -2    2.134    0.370    j   ?
+Fe 3   F  -1    1.679    0.370    a   ?
+Fe 3   Cl -1    2.090    0.370    bu  ?
+Fe 3   Br -1    2.230    0.370    bu  ?
+Fe 3   N  -3    1.820    0.370    bq  'high
+Fe 3   N  -3    1.700    0.370    bq  'low
+Fe 3   N  -3    1.815    0.370    j   'from
+Fe 3   C   2    1.689    0.370    a   ?
+Fe 4   S  -2    2.230    0.350    e   unchecked
+Fe 6   O  -2    1.760    0.350    e   unchecked
+Fe 9   O  -2    1.795    0.300    ag  'for
+Fe 9   O  -2    1.740    0.380    o   ?
+Fe 9   Br -1    2.260    0.370    b   ?
+Fe 9   I  -1    2.470    0.370    b   ?
+Fe 9   S  -2    2.160    0.370    b   ?
+Fe 9   Se -2    2.280    0.370    b   ?
+Fe 9   Te -2    2.530    0.370    b   ?
+Fe 9   N  -3    1.860    0.370    b   ?
+Fe 9   P  -3    2.270    0.370    b   ?
+Fe 9   As -3    2.350    0.370    b   ?
+Fe 9   H  -1    1.530    0.370    b   ?
+Ga 1   Se -1    2.550    0.370    e   unchecked
+Ga 3   O  -2    1.730    0.370    a   ?
+Ga 3   O  -2    1.736    0.345    bs  ?
+Ga 3   S  -2    2.163    0.370    a   ?
+Ga 3   F  -1    1.620    0.370    b   ?
+Ga 3   F  -1    1.690    0.370    e   unchecked
+Ga 3   Cl -1    2.070    0.370    b   ?
+Ga 3   Br -1    2.200    0.350    e   ?
+Ga 3   I  -1    2.460    0.370    e   unchecked
+Ga 9   Br -1    2.240    0.370    b   ?
+Ga 9   I  -1    2.450    0.370    b   ?
+Ga 9   S  -2    2.170    0.370    b   ?
+Ga 9   Se -2    2.300    0.370    b   ?
+Ga 9   Te -2    2.540    0.370    b   ?
+Ga 9   N  -3    1.840    0.370    b   ?
+Ga 9   P  -3    2.260    0.370    b   ?
+Ga 9   As -3    2.340    0.370    b   ?
+Ga 9   H  -1    1.510    0.370    b   ?
+Gd 2   O  -2    2.010    0.370    e   unchecked
+Gd 2   F  -1    2.400    0.370    e   unchecked
+Gd 3   O  -2    2.065    0.370    b   ?
+Gd 3   O  -2    1.988    0.433    bs  ?
+Gd 3   O  -2    2.031    0.370    ae  'from
+Gd 3   S  -2    2.530    0.370    e   unchecked
+Gd 3   F  -1    1.950    0.370    b   ?
+Gd 3   F  -1    1.920    0.400    p   ?
+Gd 3   Cl -1    2.445    0.370    b   ?
+Gd 3   Cl -1    2.410    0.400    p   ?
+Gd 3   Cl -1    2.457    0.370    al  ?
+Gd 3   Br -1    2.560    0.400    p   ?
+Gd 3   I  -1    2.780    0.400    p   ?
+Gd 9   Br -1    2.600    0.370    b   ?
+Gd 9   I  -1    2.820    0.370    b   ?
+Gd 9   S  -2    2.530    0.370    b   ?
+Gd 9   S  -2    2.518    0.370    al  ?
+Gd 9   Se -2    2.650    0.370    b   ?
+Gd 9   Te -2    2.840    0.370    b   ?
+Gd 9   N  -3    2.146    0.370    ah  ?
+Gd 9   N  -3    2.220    0.370    b   ?
+Gd 9   N  -3    2.100    0.370    e   ?
+Gd 9   P  -3    2.610    0.370    b   ?
+Gd 9   As -3    2.680    0.370    b   ?
+Gd 9   H  -1    1.930    0.370    b   ?
+Ge 2   S  -2    2.150    0.500    e   ?
+Ge 4   O  -2    1.748    0.370    a   ?
+Ge 4   O  -2    1.750    0.363    bs  ?
+Ge 4   S  -2    2.217    0.370    a   ?
+Ge 4   Se -2    2.350    0.370    e   unchecked
+Ge 4   F  -1    1.660    0.370    b   ?
+Ge 4   Cl -1    2.140    0.370    b   ?
+Ge 9   Br -1    2.300    0.370    b   ?
+Ge 9   I  -1    2.500    0.370    b   ?
+Ge 9   S  -2    2.230    0.370    b   ?
+Ge 9   Se -2    2.350    0.370    b   ?
+Ge 9   Te -2    2.560    0.370    b   ?
+Ge 9   N  -3    1.880    0.370    b   ?
+Ge 9   P  -3    2.320    0.370    b   ?
+Ge 9   As -3    2.430    0.370    b   ?
+Ge 9   H  -1    1.550    0.370    b   ?
+H  1   O  -2    0.569    0.940    bc  '1.05<O-H<1.70
+H  1   O  -2    0.907    0.280    bc  'O-H
+H  1   O  -2    0.990    0.590    bc  '1.70
+H  1   O  -2    0.918    0.427    bs  ?
+H  1   O  -2    0.925    0.400    az  ?
+H  1   O  -2    0.957    0.350    az  'From
+H  1   O  -2    0.870    0.457    ax  '4.0
+H  1   O  -2    0.790    0.370    ba  'For
+H  1   O  -2    1.409    0.370    ba  'For
+H  1   S  -2    1.192    0.591    ax  '5.5
+H  1   F  -1    0.708    0.558    ax  '4.5
+H  1   Cl -1    1.336    0.530    am  ?
+H  1   N  -3    1.014    0.413    bb  'From
+Hf 3   F  -1    2.620    0.370    e   unchecked
+Hf 4   O  -2    1.923    0.370    b   ?
+Hf 4   O  -2    1.923    0.375    bs  ?
+Hf 4   F  -1    1.850    0.370    b   ?
+Hf 4   F  -1    1.820    0.400    p   ?
+Hf 4   Cl -1    2.240    0.370    e   unchecked
+Hf 4   Cl -1    2.300    0.370    b   ?
+Hf 9   Br -1    2.470    0.370    b   ?
+Hf 9   S  -2    2.390    0.370    b   ?
+Hf 9   Se -2    2.520    0.370    b   ?
+Hf 9   Te -2    2.720    0.370    b   ?
+Hf 9   I  -1    2.680    0.370    b   ?
+Hf 9   N  -3    2.090    0.370    b   ?
+Hf 9   P  -3    2.480    0.370    b   ?
+Hf 9   As -3    2.560    0.370    b   ?
+Hf 9   H  -1    1.780    0.370    b   ?
+Hg 1   O  -2    1.900    0.370    b   ?
+Hg 1   F  -1    1.810    0.370    b   ?
+Hg 1   Cl -1    2.280    0.370    b   ?
+Hg 2   O  -2    1.924    0.380    bj  ?
+Hg 2   O  -2    1.972    0.370    a   ?
+Hg 2   O  -2    1.947    0.370    bs  ?
+Hg 2   O  -2    1.930    0.370    b   ?
+Hg 2   S  -2    2.308    0.370    a   ?
+Hg 2   F  -1    2.170    0.370    e   unchecked
+Hg 2   F  -1    1.900    0.370    b   ?
+Hg 2   Cl -1    2.280    0.370    e   ?
+Hg 2   Cl -1    2.250    0.370    b   ?
+Hg 2   Br -1    2.380    0.370    e   unchecked
+Hg 2   I  -1    2.620    0.370    e   unchecked
+Hg 9   Br -1    2.400    0.370    b   ?
+Hg 9   I  -1    2.590    0.370    b   ?
+Hg 9   S  -2    2.320    0.370    b   ?
+Hg 9   Se -2    2.470    0.370    b   ?
+Hg 9   Te -2    2.610    0.370    b   ?
+Hg 9   N  -3    2.020    0.370    b   ?
+Hg 9   P  -3    2.420    0.370    b   ?
+Hg 9   As -3    2.500    0.370    b   ?
+Hg 9   H  -1    1.710    0.370    b   ?
+Hg 2   Hg  2    2.510    0.350    f   ?
+Ho 3   O  -2    2.025    0.370    a   ?
+Ho 3   O  -2    1.993    0.387    bs  ?
+Ho 3   O  -2    1.992    0.370    ae  'from
+Ho 3   S  -2    2.490    0.370    e   unchecked
+Ho 3   F  -1    1.908    0.370    b   ?
+Ho 3   F  -1    1.880    0.400    p   ?
+Ho 3   Cl -1    2.401    0.370    b   ?
+Ho 3   Cl -1    2.370    0.400    p   ?
+Ho 3   Cl -1    2.399    0.370    al  ?
+Ho 3   Br -1    2.520    0.400    p   ?
+Ho 3   I  -1    2.760    0.400    p   ?
+Ho 9   Br -1    2.550    0.370    b   ?
+Ho 9   I  -1    2.770    0.370    b   ?
+Ho 9   S  -2    2.480    0.370    b   ?
+Ho 9   Se -2    2.610    0.370    b   ?
+Ho 9   Te -2    2.800    0.370    b   ?
+Ho 9   N  -3    2.118    0.370    ah  ?
+Ho 9   N  -3    2.180    0.370    b   ?
+Ho 9   P  -3    2.560    0.370    b   ?
+Ho 9   As -3    2.640    0.370    b   ?
+Ho 9   H  -1    1.880    0.370    b   ?
+I  0   I   0    2.195    0.350    e   unchecked
+I  1   F  -1    2.320    0.370    e   unchecked
+I  1   Cl -1    2.470    0.370    e   unchecked
+I  3   O  -2    2.020    0.370    e   unchecked
+I  3   F  -1    1.900    0.370    b   ?
+I  3   Cl -1    2.390    0.370    e   unchecked
+I  5   O  -2    1.990    0.440    bd  ?
+I  5   O  -2    1.992    0.474    bs  ?
+I  5   O  -2    1.800    1.000    e   ?
+I  5   O  -2    2.003    0.370    a   ?
+I  5   F  -1    1.840    0.370    e   unchecked
+I  5   F  -1    1.900    0.370    b   ?
+I  5   Cl -1    2.380    0.370    b   ?
+I  7   O  -2    1.930    0.370    b   ?
+I  7   O  -2    1.930    0.299    bs  ?
+I  7   F  -1    1.830    0.370    b   ?
+I  7   Cl -1    2.310    0.370    b   ?
+In 1   Cl -1    2.560    0.370    e   unchecked
+In 3   O  -2    1.902    0.370    a   ?
+In 3   O  -2    1.823    0.459    bs  ?
+In 3   S  -2    2.370    0.370    a   ?
+In 3   F  -1    1.792    0.370    a   ?
+In 3   Cl -1    2.280    0.370    b   ?
+In 3   Br -1    2.510    0.350    e   unchecked
+In 3   I  -1    2.630    0.370    e   unchecked
+In 3   Co -1    2.593    0.350    e   unchecked
+In 3   Mn -2    2.604    0.350    e   unchecked
+In 9   Br -1    2.410    0.370    b   ?
+In 9   I  -1    2.630    0.370    b   ?
+In 9   S  -2    2.360    0.370    b   ?
+In 9   Se -2    2.470    0.370    b   ?
+In 9   Te -2    2.690    0.370    b   ?
+In 9   N  -3    2.030    0.370    b   ?
+In 9   P  -3    2.430    0.370    b   ?
+In 9   As -3    2.510    0.370    b   ?
+In 9   H  -1    1.720    0.370    b   ?
+Ir 3   O  -2    1.755    0.414    bs  'Sample
+Ir 4   O  -2    1.909    0.258    bs  ?
+Ir 4   O  -2    1.870    0.370    e   unchecked
+Ir 4   F  -1    1.800    0.370    e   unchecked
+Ir 5   O  -2    1.916    0.370    b   ?
+Ir 5   O  -2    1.909    0.449    bs  'Small
+Ir 5   F  -1    1.820    0.370    b   ?
+Ir 5   Cl -1    2.300    0.370    b   ?
+Ir 9   S  -2    2.380    0.370    b   ?
+Ir 9   Se -2    2.510    0.370    b   ?
+Ir 9   Te -2    2.710    0.370    b   ?
+Ir 9   Br -1    2.450    0.370    b   ?
+Ir 9   I  -1    2.660    0.370    b   ?
+Ir 9   N  -3    2.060    0.370    b   ?
+Ir 9   P  -3    2.460    0.370    b   ?
+Ir 9   As -3    2.540    0.370    b   ?
+Ir 9   H  -1    1.760    0.370    b   ?
+K  1   O  -2    2.132    0.370    a   ?
+K  1   O  -2    2.094    0.370    bt  'organic
+K  1   O  -2    2.047    0.398    bs  ?
+K  1   O  -2    2.113    0.370    u   ?
+K  1   O  -2    2.070    0.370    bu  ?
+K  1   O  -2    1.955    0.430    c   '6
+K  1   O  -2    1.840    0.480    o   ?
+K  1   S  -2    2.590    0.370    b   ?
+K  1   S  -2    2.152    0.580    c   '7
+K  1   S  -2    2.630    0.370    e   unchecked
+K  1   Se -2    2.720    0.370    b   ?
+K  1   Se -2    2.281    0.612    c   '7
+K  1   Te -2    2.930    0.370    b   ?
+K  1   Te -2    2.410    0.653    c   '7
+K  1   F  -1    1.992    0.370    a   ?
+K  1   F  -1    1.831    0.429    c   '6
+K  1   Cl -1    2.519    0.370    a   ?
+K  1   Cl -1    2.071    0.559    c   '6
+K  1   Br -1    2.660    0.370    b   ?
+K  1   Br -1    2.153    0.603    c   '7
+K  1   I  -1    2.880    0.370    b   ?
+K  1   I  -1    2.282    0.658    c   '7
+K  1   I  -1    2.920    0.370    e   unchecked
+K  1   N  -3    2.260    0.370    b   ?
+K  1   N  -3    2.220    0.370    bu  ?
+K  1   P  -3    2.640    0.370    b   ?
+K  1   As -3    2.830    0.370    b   ?
+K  1   H  -1    2.100    0.370    b   ?
+Kr 2   F  -1    1.880    0.370    e   ?
+La 3   O  -2    2.086    0.450    bj  ?
+La 3   O  -2    2.179    0.359    bs  ?
+La 3   O  -2    2.172    0.370    a   ?
+La 3   O  -2    2.172    0.330    ac  ?
+La 3   O  -2    2.148    0.370    ae  'from
+La 3   S  -2    2.643    0.370    a   ?
+La 3   S  -2    2.632    0.370    al  ?
+La 3   Se -2    2.740    0.370    b   ?
+La 3   Te -2    2.940    0.370    b   ?
+La 3   F  -1    2.020    0.400    p   ?
+La 3   F  -1    2.080    0.370    e   unchecked
+La 3   Cl -1    2.545    0.370    b   ?
+La 3   Cl -1    2.570    0.370    e   unchecked
+La 3   Cl -1    2.580    0.400    p   ?
+La 3   Br -1    2.720    0.370    b   ?
+La 3   Br -1    2.660    0.400    p   ?
+La 3   I  -1    2.930    0.370    b   ?
+La 3   I  -1    2.880    0.400    p   ?
+La 3   N  -3    2.261    0.370    ah  ?
+La 3   N  -3    2.340    0.370    b   ?
+La 3   P  -3    2.730    0.370    b   ?
+La 3   As -3    2.800    0.370    b   ?
+La 3   H  -1    2.060    0.370    b   ?
+Li 1   O  -2    1.466    0.370    a   ?
+Li 1   O  -2    1.062    0.642    bs  ?
+Li 1   O  -2    1.175    0.514    c   '6
+Li 1   O  -2    1.174    0.590    ay  '6.0
+Li 1   O  -2    1.290    0.480    o   ?
+Li 1   S  -2    1.940    0.370    b   ?
+Li 1   S  -2    1.461    0.656    c   '6
+Li 1   Se -2    2.090    0.370    b   ?
+Li 1   Se -2    1.627    0.681    c   '7
+Li 1   Te -2    2.300    0.370    b   ?
+Li 1   Te -2    1.734    0.717    c   '7
+Li 1   F  -1    1.360    0.370    a   ?
+Li 1   F  -1    1.097    0.503    c   '6
+Li 1   Cl -1    1.910    0.370    b   ?
+Li 1   Cl -1    1.387    0.640    c   '6
+Li 1   Cl -1    1.940    0.370    e   unchecked
+Li 1   Br -1    2.020    0.370    b   ?
+Li 1   Br -1    1.515    0.674    c   '7
+Li 1   I  -1    2.220    0.370    b   ?
+Li 1   I  -1    1.675    0.722    c   '7
+Li 1   N  -3    1.610    0.370    b   ?
+Li 1   N  -3    1.150    0.631    ay  '6.5
+Lu 3   O  -2    1.971    0.370    b   ?
+Lu 3   O  -2    1.939    0.403    bs  ?
+Lu 3   O  -2    1.947    0.370    ae  'from
+Lu 3   S  -2    2.430    0.370    b   ?
+Lu 3   Se -2    2.560    0.370    b   ?
+Lu 3   Te -2    2.750    0.370    b   ?
+Lu 3   F  -1    1.876    0.370    b   ?
+Lu 3   F  -1    1.840    0.400    p   ?
+Lu 3   Cl -1    2.361    0.370    b   ?
+Lu 3   Cl -1    2.361    0.370    al  ?
+Lu 3   Cl -1    2.330    0.400    p   ?
+Lu 3   Br -1    2.500    0.370    b   ?
+Lu 3   Br -1    2.480    0.400    p   ?
+Lu 3   I  -1    2.730    0.370    b   ?
+Lu 3   I  -1    2.730    0.400    p   ?
+Lu 3   N  -3    2.046    0.370    ah  ?
+Lu 3   N  -3    2.110    0.370    b   ?
+Lu 3   P  -3    2.510    0.370    b   ?
+Lu 3   As -3    2.590    0.370    b   ?
+Lu 3   H  -1    1.820    0.370    b   ?
+Mg 2   O  -2    1.693    0.370    a   ?
+Mg 2   O  -2    1.611    0.370    bt  'organic
+Mg 2   O  -2    1.608    0.443    bs  ?
+Mg 2   O  -2    1.636    0.420    o   ?
+Mg 2   S  -2    2.180    0.370    b   ?
+Mg 2   Se -2    2.320    0.370    b   ?
+Mg 2   Te -2    2.530    0.370    b   ?
+Mg 2   F  -1    1.578    0.370    a   ?
+Mg 2   F  -1    1.640    0.370    bu  ?
+Mg 2   Cl -1    2.080    0.370    b   ?
+Mg 2   Cl -1    2.110    0.370    bu  ?
+Mg 2   Br -1    2.280    0.370    b   ?
+Mg 2   I  -1    2.460    0.370    b   ?
+Mg 2   N  -3    1.850    0.370    b   ?
+Mg 2   N  -3    1.780    0.370    bu  ?
+Mg 2   P  -3    2.290    0.370    b   ?
+Mg 2   As -3    2.380    0.370    b   ?
+Mg 2   H  -1    1.530    0.370    b   ?
+Mn 2   O  -2    1.790    0.370    a   ?
+Mn 2   O  -2    1.740    0.417    bs  ?
+Mn 2   O  -2    1.765    0.370    j   ?
+Mn 2   O  -2    1.762    0.400    ap  'R0
+Mn 2   S  -2    2.220    0.370    e   unchecked
+Mn 2   F  -1    1.698    0.370    a   ?
+Mn 2   Cl -1    2.133    0.370    a   ?
+Mn 2   Br -1    2.340    0.370    e   unchecked
+Mn 2   I  -2    2.520    0.370    e   unchecked
+Mn 2   N  -3    1.840    0.370    bq  'high
+Mn 2   N  -3    1.680    0.370    bq  'intermediate
+Mn 2   N  -3    1.530    0.370    bq  'low
+Mn 2   N  -3    1.849    0.370    j   'from
+Mn 3   O  -2    1.760    0.370    a   ?
+Mn 3   O  -2    1.823    0.247    bs  ?
+Mn 3   O  -2    1.732    0.370    j   'from
+Mn 3   O  -2    1.762    0.350    ap  'R0
+Mn 3   F  -1    1.660    0.370    b   ?
+Mn 3   F  -1    1.666    0.360    at  ?
+Mn 3   Cl -1    2.140    0.370    b   ?
+Mn 3   N  -3    1.820    0.370    bq  'high
+Mn 3   N  -3    1.710    0.370    bq  'low
+Mn 3   N  -3    1.837    0.370    j   'from
+Mn 4   O  -2    1.753    0.370    a   ?
+Mn 4   O  -2    1.750    0.374    bs  ?
+Mn 4   O  -2    1.750    0.370    j   'from
+Mn 4   O  -2    1.762    0.340    ap  'R0
+Mn 4   F  -1    1.710    0.370    b   ?
+Mn 4   F  -1    1.630    0.370    e   unchecked
+Mn 4   Cl -1    2.130    0.370    b   ?
+Mn 4   N  -3    1.822    0.370    j   'from
+Mn 5   O  -2    1.781    0.375    bs  'Small
+Mn 5   O  -2    1.762    0.300    ap  'Ro
+Mn 6   O  -2    1.814    0.375    bs  'Small
+Mn 6   O  -2    1.790    0.370    e   ?
+Mn 6   O  -2    1.762    0.270    ap  'Ro
+Mn 7   O  -2    1.819    0.375    bs  'Small
+Mn 7   O  -2    1.827    0.370    e   unchecked
+Mn 7   O  -2    1.790    0.370    b   ?
+Mn 7   O  -2    1.762    0.260    ap  'Ro
+Mn 7   F  -1    1.720    0.370    b   ?
+Mn 7   Cl -1    2.170    0.370    b   ?
+Mn 9   O  -2    1.754    0.370    g   'from
+Mn 9   Br -1    2.260    0.370    b   ?
+Mn 9   I  -1    2.490    0.370    b   ?
+Mn 9   S  -2    2.200    0.370    b   ?
+Mn 9   Se -1    2.320    0.370    b   ?
+Mn 9   Te -2    2.550    0.370    b   ?
+Mn 9   N  -3    1.870    0.370    b   ?
+Mn 9   P  -3    2.240    0.370    b   ?
+Mn 9   As -3    2.360    0.370    b   ?
+Mn 9   H  -1    1.550    0.370    b   ?
+Mo 2   S  -2    2.072    0.422    ax  '5.5
+Mo 2   Cl -1    2.052    0.441    ax  '5.5
+Mo 3   O  -2    1.834    0.370    m   ?
+Mo 3   O  -2    1.792    0.436    bs  'Small
+Mo 3   O  -2    1.789    0.418    ax  '5.5
+Mo 3   S  -2    2.062    0.519    ax  '6.0
+Mo 3   F  -1    1.760    0.350    e   unchecked
+Mo 3   F  -1    1.738    0.427    ax  '5.5
+Mo 3   Cl -1    2.220    0.370    e   unchecked
+Mo 3   Cl -1    2.089    0.501    ax  '6.0
+Mo 3   Br -1    2.340    0.370    e   unchecked
+Mo 3   Br -1    2.191    0.541    ax  '6.0
+Mo 3   N  -3    1.960    0.370    e   unchecked
+Mo 4   O  -2    1.886    0.370    j   'from
+Mo 4   O  -2    1.834    0.404    bs  'Small
+Mo 4   O  -2    1.856    0.370    m   ?
+Mo 4   O  -2    1.724    0.562    ax  '6.5
+Mo 4   S  -2    2.235    0.370    j   'from
+Mo 4   F  -1    1.800    0.370    e   unchecked
+Mo 4   Cl -1    2.128    0.558    ax  '6.5
+Mo 4   N  -3    2.043    0.370    j   'from
+Mo 5   O  -2    1.907    0.370    j   'from
+Mo 5   O  -2    1.888    0.314    bs  ?
+Mo 5   O  -2    1.878    0.370    m   ?
+Mo 5   O  -2    1.848    0.482    ax  '5.5
+Mo 5   S  -2    2.288    0.370    j   'from
+Mo 5   Cl -1    2.260    0.370    e   unchecked
+Mo 5   N  -3    2.009    0.370    j   'from
+Mo 6   O  -2    1.907    0.370    a   ?
+Mo 6   O  -2    1.903    0.349    bs  ?
+Mo 6   O  -2    1.915    0.410    x   ?
+Mo 6   O  -2    1.870    0.260    n   ?
+Mo 6   O  -2    1.900    0.370    m   ?
+Mo 6   O  -2    1.912    0.405    ax  '5.0
+Mo 6   S  -2    2.331    0.370    j   'from
+Mo 6   F  -1    1.810    0.370    b   ?
+Mo 6   Cl -1    2.280    0.370    b   ?
+Mo 6   N  -3    2.009    0.370    j   'from
+Mo 9   O  -2    1.879    0.300    z   'applies
+Mo 9   Br -1    2.430    0.370    b   ?
+Mo 9   I  -1    2.640    0.370    b   ?
+Mo 9   S  -2    2.350    0.370    b   ?
+Mo 9   Se -2    2.490    0.370    b   ?
+Mo 9   Te -2    2.690    0.370    b   ?
+Mo 9   N  -3    2.040    0.370    b   ?
+Mo 9   P  -3    2.440    0.370    b   ?
+Mo 9   As -3    2.520    0.370    b   ?
+Mo 9   H  -1    1.730    0.370    b   ?
+N  3   O  -2    1.361    0.370    a   ?
+N  3   S  -2    1.730    0.370    e   unchecked
+N  3   F  -1    1.370    0.370    b   ?
+N  3   Cl -1    1.750    0.370    b   ?
+N -3   N  -3    1.440    0.350    e   unchecked
+N  5   O  -2    1.432    0.370    a   ?
+N  5   O  -2    1.492    0.482    bs  ?
+N  5   O  -2    1.410    0.430    o   ?
+N  5   F  -1    1.360    0.370    b   ?
+N  5   Cl -1    1.800    0.370    b   ?
+Na 1   O  -2    1.803    0.370    a   ?
+Na 1   O  -2    1.744    0.370    bt  'organic
+Na 1   O  -2    1.695    0.420    bs  ?
+Na 1   O  -2    1.756    0.370    v   ?
+Na 1   O  -2    1.577    0.475    c   '6
+Na 1   O  -2    1.661    0.440    o   ?
+Na 1   S  -2    2.300    0.370    a   ?
+Na 1   S  -2    2.230    0.370    bu  ?
+Na 1   S  -2    2.280    0.370    b   ?
+Na 1   S  -2    1.821    0.626    c   '6
+Na 1   Se -2    2.410    0.370    b   ?
+Na 1   Se -2    1.891    0.654    c   '7
+Na 1   Te -2    2.640    0.370    b   ?
+Na 1   Te -2    2.040    0.690    c   '7
+Na 1   F  -1    1.677    0.370    a   ?
+Na 1   F  -1    1.448    0.465    c   '6
+Na 1   Cl -1    2.150    0.370    b   ?
+Na 1   Cl -1    1.683    0.608    c   '6
+Na 1   Cl -1    2.220    0.370    e   unchecked
+Na 1   Br -1    2.330    0.370    b   ?
+Na 1   Br -1    1.772    0.646    c   '7
+Na 1   I  -1    2.560    0.370    b   ?
+Na 1   I  -1    1.956    0.695    c   '7
+Na 1   N  -3    1.930    0.370    b   ?
+Na 1   N  -3    1.880    0.370    bu  ?
+Na 1   P  -3    2.360    0.370    b   ?
+Na 1   As -3    2.530    0.370    b   ?
+Na 1   H  -1    1.680    0.370    b   ?
+Nb 3   O  -2    1.910    0.350    e   unchecked
+Nb 3   F  -1    1.710    0.370    e   unchecked
+Nb 3   Cl -1    2.200    0.370    e   unchecked
+Nb 3   Br -1    2.350    0.370    e   unchecked
+Nb 4   O  -2    1.853    0.479    bs  'Small
+Nb 4   O  -2    1.880    0.370    e   unchecked
+Nb 4   F  -1    1.900    0.370    e   unchecked
+Nb 4   Cl -1    2.260    0.350    e   unchecked
+Nb 4   Cl -1    2.236    0.370    av  'based
+Nb 4   Br -1    2.620    0.370    e   unchecked
+Nb 4   N  -3    2.004    0.370    av  'based
+Nb 5   O  -2    1.911    0.370    a   ?
+Nb 5   O  -2    1.909    0.369    bs  ?
+Nb 5   O  -2    1.916    0.370    x   ?
+Nb 5   F  -1    1.870    0.370    b   ?
+Nb 5   Cl -1    2.270    0.370    b   ?
+Nb 5   I  -1    2.770    0.370    e   unchecked
+Nb 5   N  -3    2.010    0.350    e   unchecked
+Nb 9   Br -1    2.450    0.370    b   ?
+Nb 9   I  -1    2.680    0.370    b   ?
+Nb 9   S  -2    2.370    0.370    b   ?
+Nb 9   Se -2    2.510    0.370    b   ?
+Nb 9   Te -2    2.700    0.370    b   ?
+Nb 9   N  -3    2.060    0.370    b   ?
+Nb 9   P  -3    2.460    0.370    b   ?
+Nb 9   As -3    2.540    0.370    b   ?
+Nb 9   H  -1    1.750    0.370    b   ?
+Nd 2   O  -2    1.950    0.370    e   unchecked
+Nd 2   S  -2    2.600    0.350    e   unchecked
+Nd 3   O  -2    2.021    0.460    bj  ?
+Nd 3   O  -2    2.103    0.371    bs  ?
+Nd 3   O  -2    2.105    0.370    a   ?
+Nd 3   O  -2    2.117    0.370    b   ?
+Nd 3   O  -2    2.086    0.370    ae  'from
+Nd 3   S  -2    2.590    0.370    b   ?
+Nd 3   S  -2    2.559    0.370    al  ?
+Nd 3   Se -2    2.710    0.370    b   ?
+Nd 3   Te -2    2.890    0.370    b   ?
+Nd 3   F  -1    2.008    0.370    b   ?
+Nd 3   F  -1    1.980    0.400    p   ?
+Nd 3   Cl -1    2.492    0.370    b   ?
+Nd 3   Cl -1    2.512    0.370    al  ?
+Nd 3   Cl -1    2.460    0.400    p   ?
+Nd 3   Br -1    2.660    0.370    b   ?
+Nd 3   Br -1    2.610    0.400    p   ?
+Nd 3   I  -1    2.870    0.370    b   ?
+Nd 3   I  -1    2.840    0.400    p   ?
+Nd 3   N  -3    2.201    0.370    ah  ?
+Nd 3   N  -3    2.300    0.370    b   ?
+NH 1   O  -2    2.226    0.370    s   ?
+NH 1   F  -1    2.129    0.370    s   ?
+NH 1   Cl -1    2.619    0.370    s   ?
+Ni 2   O  -2    1.675    0.370    e   'better
+Ni 2   O  -2    1.689    0.347    bs  ?
+Ni 2   O  -2    1.670    0.370    j   'from
+Ni 2   O  -2    1.654    0.370    a   ?
+Ni 2   S  -2    1.980    0.370    e   unchecked
+Ni 2   S  -2    1.937    0.370    j   'from
+Ni 2   F  -1    1.596    0.370    a   ?
+Ni 2   Cl -1    2.020    0.370    b   ?
+Ni 2   Br -1    2.200    0.370    e   unchecked
+Ni 2   I  -1    2.400    0.370    e   unchecked
+Ni 2   N  -3    1.700    0.370    e   unchecked
+Ni 2   N  -3    1.647    0.370    j   'from
+Ni 3   O  -2    1.750    0.370    e   ?
+Ni 3   S  -2    2.040    0.370    j   'from
+Ni 3   F  -1    1.580    0.370    e   unchecked
+Ni 3   N  -3    1.731    0.370    j   'from
+Ni 4   O  -2    1.734    0.335    bs  'Small
+Ni 4   F  -1    1.610    0.370    e   unchecked
+Ni 9   Br -1    2.160    0.370    b   ?
+Ni 9   I  -1    2.340    0.370    b   ?
+Ni 9   S  -2    2.040    0.370    b   ?
+Ni 9   Se -2    2.140    0.370    b   ?
+Ni 9   Te -2    2.430    0.370    b   ?
+Ni 9   N  -3    1.750    0.370    b   ?
+Ni 9   P  -3    2.170    0.370    b   ?
+Ni 9   As -3    2.240    0.370    b   ?
+Ni 9   H  -1    1.400    0.370    b   ?
+Np 3   F  -1    2.000    0.400    p   ?
+Np 3   Cl -1    2.480    0.400    p   ?
+Np 3   Br -1    2.620    0.400    p   ?
+Np 3   I  -1    2.850    0.400    p   ?
+Np 4   O  -2    2.180    0.370    e   unchecked
+Np 4   O  -2    2.110    0.350    p   ?
+Np 4   F  -1    2.020    0.370    e   unchecked
+Np 4   F  -1    1.980    0.400    p   ?
+Np 4   Cl -1    2.460    0.400    p   ?
+Np 5   O  -2    2.036    0.411    bs  ?
+Np 5   O  -2    2.090    0.350    p   ?
+Np 5   F  -1    1.970    0.400    p   ?
+Np 5   Cl -1    2.420    0.400    p   ?
+Np 6   O  -2    2.022    0.523    bs  'Small
+Np 6   O  -2    2.070    0.350    p   ?
+Np 6   F  -1    1.970    0.400    p   ?
+Np 7   O  -2    2.076    0.477    bs  'Sample
+Np 7   O  -2    2.060    0.350    p   ?
+O -2   O  -2    1.406    0.370    e   unchecked
+Os 4   O  -2    1.811    0.370    b   ?
+Os 4   S  -2    2.210    0.370    e   unchecked
+Os 4   F  -1    1.720    0.370    b   ?
+Os 4   Cl -1    2.190    0.370    b   ?
+Os 4   Br -1    2.370    0.370    e   unchecked
+Os 5   O  -2    1.870    0.485    bs  'small
+Os 5   F  -1    1.810    0.370    e   unchecked
+Os 6   O  -2    1.904    0.375    bs  'sample
+Os 6   O  -2    2.030    0.370    e   unchecked
+Os 6   F  -1    1.800    0.350    e   unchecked
+Os 7   O  -2    1.937    0.349    bs  ?
+Os 8   O  -2    1.966    0.405    bs  ?
+Os 8   O  -2    1.920    0.370    e   unchecked
+P  3   O  -2    1.655    0.399    bs  'Small
+P  3   O  -2    1.630    0.370    e   unchecked
+P  3   S  -2    2.120    0.370    e   unchecked
+P  3   Se -2    2.240    0.370    e   unchecked
+P  3   F  -1    1.530    0.350    e   unchecked
+P  4   O  -2    1.640    0.370    e   unchecked
+P  4   S  -2    2.130    0.350    e   unchecked
+P  4   F  -1    1.660    0.370    e   unchecked
+P  5   O  -2    1.617    0.370    a   ?
+P  5   O  -2    1.624    0.399    bs  'B
+P  5   O  -2    1.615    0.370    au  ?
+P  5   O  -2    1.604    0.370    b   ?
+P  5   S  -2    2.125    0.370    bv  ?
+P  5   S  -2    2.145    0.370    a   ?
+P  5   F  -1    1.540    0.370    e   unchecked
+P  5   Cl -1    2.020    0.370    e   ?
+P  5   Br -1    2.170    0.400    e   unchecked
+P  5   N  -3    1.704    0.370    a   ?
+P  9   Br -1    2.150    0.370    b   ?
+P  9   I  -1    2.400    0.370    b   ?
+P  9   S  -2    2.110    0.370    b   ?
+P  9   Se -2    2.260    0.370    b   ?
+P  9   Te -2    2.440    0.370    b   ?
+P  9   N  -3    1.730    0.370    b   ?
+P  9   P  -3    2.190    0.370    b   ?
+P  9   As -3    2.250    0.370    b   ?
+P  9   H  -1    1.410    0.370    b   ?
+P  5   P   5    2.220    0.350    e   unchecked
+Pa 4   O  -2    2.150    0.350    p   ?
+Pa 4   F  -1    2.020    0.400    p   ?
+Pa 4   Cl -1    2.490    0.400    p   ?
+Pa 4   Br -1    2.660    0.400    p   ?
+Pa 5   O  -2    2.090    0.350    e   unchecked
+Pa 5   O  -2    2.110    0.350    p   ?
+Pa 5   F  -1    2.040    0.370    e   unchecked
+Pa 5   F  -1    2.010    0.400    p   ?
+Pa 5   Cl -1    2.450    0.400    p   ?
+Pa 5   Br -1    2.580    0.400    p   ?
+Pb 2   O  -2    1.963    0.490    q   ?
+Pb 2   O  -2    2.032    0.442    bs  ?
+Pb 2   O  -2    2.112    0.370    a   ?
+Pb 2   S  -2    2.420    0.500    e   unchecked
+Pb 2   S  -2    2.541    0.370    a   ?
+Pb 2   Se -2    2.690    0.370    e   unchecked
+Pb 2   F  -1    2.030    0.370    b   ?
+Pb 2   F  -1    2.036    0.382    aq  'R0
+Pb 2   Cl -1    2.530    0.370    b   ?
+Pb 2   Cl -1    2.447    0.400    aq  'R0
+Pb 2   Br -1    2.598    0.400    aq  'R0
+Pb 2   Br -1    2.680    0.370    e   unchecked
+Pb 2   I  -1    2.830    0.370    e   unchecked
+Pb 2   I  -1    2.804    0.386    aq  'R0
+Pb 2   N  -3    2.180    0.400    e   unchecked
+Pb 4   O  -2    2.042    0.370    a   ?
+Pb 4   O  -2    2.056    0.280    bs  ?
+Pb 4   F  -1    1.940    0.370    b   ?
+Pb 4   Cl -1    2.430    0.370    b   ?
+Pb 4   Cl -1    2.360    0.370    e   unchecked
+Pb 4   Br -1    3.040    0.350    e   unchecked
+Pb 9   Br -1    2.640    0.370    b   ?
+Pb 9   I  -1    2.780    0.370    b   ?
+Pb 9   S  -2    2.550    0.370    b   ?
+Pb 9   Se -2    2.670    0.370    b   ?
+Pb 9   Te -2    2.840    0.370    b   ?
+Pb 9   N  -3    2.220    0.370    b   ?
+Pb 9   P  -3    2.640    0.370    b   ?
+Pb 9   As -3    2.720    0.370    b   ?
+Pb 9   H  -1    1.970    0.370    b   ?
+Pd 2   O  -2    1.792    0.370    b   ?
+Pd 2   O  -2    1.749    0.375    bs  'B
+Pd 2   S  -2    2.090    0.370    e   unchecked
+Pd 2   F  -1    1.740    0.370    b   ?
+Pd 2   Cl -1    2.050    0.370    b   ?
+Pd 2   Br -1    2.200    0.370    e   unchecked
+Pd 2   I  -1    2.360    0.370    e   unchecked
+Pd 2   N  -3    1.820    0.350    e   unchecked
+Pd 2   C  -4    1.730    0.370    e   unchecked
+Pd 4   O  -2    1.856    0.352    bs  'Sample
+Pd 4   S  -2    2.300    0.370    e   unchecked
+Pd 4   F  -1    1.660    0.370    e   unchecked
+Pd 9   Br -1    2.190    0.370    b   ?
+Pd 9   I  -1    2.380    0.370    b   ?
+Pd 9   S  -2    2.100    0.370    b   ?
+Pd 9   Se -2    2.220    0.370    b   ?
+Pd 9   Te -2    2.480    0.370    b   ?
+Pd 9   N  -3    1.810    0.370    b   ?
+Pd 9   P  -3    2.220    0.370    b   ?
+Pd 9   As -3    2.300    0.370    b   ?
+Pd 9   H  -1    1.470    0.370    b   ?
+Pm 3   F  -1    1.960    0.400    p   ?
+Pm 3   Cl -1    2.450    0.400    p   ?
+Pm 3   Br -1    2.590    0.400    p   ?
+Pm 3   Cl -1    2.820    0.400    p   ?
+Po 4   O  -2    2.190    0.370    e   unchecked
+Po 4   F  -1    2.380    0.370    e   unchecked
+Pr 3   O  -2    2.138    0.370    a   ?
+Pr 3   O  -2    2.071    0.411    bs  ?
+Pr 3   O  -2    2.098    0.370    ae  'from
+Pr 3   S  -2    2.600    0.370    b   ?
+Pr 3   S  -2    2.594    0.370    al  ?
+Pr 3   Se -1    2.720    0.370    b   ?
+Pr 3   Te -2    2.900    0.370    b   ?
+Pr 3   F  -1    2.022    0.370    b   ?
+Pr 3   F  -1    1.990    0.400    p   ?
+Pr 3   Cl -1    2.500    0.370    b   ?
+Pr 3   Cl -1    2.521    0.370    al  ?
+Pr 3   Cl -1    2.470    0.400    p   ?
+Pr 3   Br -1    2.670    0.370    b   ?
+Pr 3   Br -1    2.630    0.400    p   ?
+Pr 3   I  -1    2.890    0.370    b   ?
+Pr 3   I  -1    2.850    0.400    p   ?
+Pr 3   N  -3    2.215    0.370    ah  ?
+Pr 3   N  -3    2.300    0.370    b   ?
+Pr 3   P  -3    2.680    0.370    b   ?
+Pr 3   As -3    2.750    0.370    b   ?
+Pr 3   H  -1    2.020    0.370    b   ?
+Pt 2   O  -2    1.768    0.370    b   ?
+Pt 2   O  -2    1.742    0.375    bs  'small
+Pt 2   O  -2    1.800    0.370    e   unchecked
+Pt 2   S  -2    2.160    0.370    e   unchecked
+Pt 2   F  -1    1.680    0.370    b   ?
+Pt 2   Cl -1    2.050    0.370    b   ?
+Pt 2   Br -1    2.200    0.370    e   unchecked
+Pt 2   C   2    1.760    0.370    a   ?
+Pt 2   N  -3    1.810    0.370    e   unchecked
+Pt 3   O  -2    1.870    0.370    e   unchecked
+Pt 3   Cl -1    2.300    0.370    e   unchecked
+Pt 3   Br -1    2.470    0.350    e   unchecked
+Pt 4   O  -2    1.879    0.370    a   ?
+Pt 4   O  -2    1.856    0.407    bs  'Ro
+Pt 4   F  -1    1.759    0.370    b   ?
+Pt 4   F  -1    2.190    0.370    e   unchecked
+Pt 4   Cl -1    2.170    0.370    b   ?
+Pt 4   Cl -1    2.320    0.370    e   unchecked
+Pt 4   Br -1    2.600    0.350    e   unchecked
+Pt 9   Br -1    2.180    0.370    b   ?
+Pt 9   I  -1    2.370    0.370    b   ?
+Pt 9   S  -2    2.080    0.370    b   ?
+Pt 9   Se -2    2.190    0.370    b   ?
+Pt 9   Te -2    2.450    0.370    b   ?
+Pt 9   N  -3    1.770    0.370    b   ?
+Pt 9   P  -3    2.190    0.370    b   ?
+Pt 9   As -3    2.260    0.370    b   ?
+Pt 9   H  -1    1.400    0.370    b   ?
+Pu 3   O  -2    2.110    0.370    b   ?
+Pu 3   O  -2    2.140    0.350    p   ?
+Pu 3   F  -1    2.000    0.370    b   ?
+Pu 3   F  -1    1.990    0.400    p   ?
+Pu 3   Cl -1    2.480    0.370    b   ?
+Pu 3   Cl -1    2.460    0.400    p   ?
+Pu 3   Br -1    2.600    0.400    p   ?
+Pu 3   I  -1    2.840    0.400    p   ?
+Pu 4   O  -2    2.090    0.350    p   ?
+Pu 4   O  -2    2.068    0.385    bf  ?
+Pu 4   F  -1    1.970    0.400    p   ?
+Pu 4   Cl -1    2.440    0.400    p   ?
+Pu 5   O  -2    2.110    0.370    e   ?
+Pu 5   O  -2    2.080    0.350    p   ?
+Pu 5   F  -1    1.960    0.400    p   ?
+Pu 6   O  -2    2.060    0.350    p   ?
+Pu 6   F  -1    1.960    0.400    p   ?
+Pu 7   O  -2    2.050    0.350    p   ?
+Rb 1   O  -2    2.263    0.370    a   ?
+Rb 1   O  -2    2.228    0.370    bt  'organic
+Rb 1   O  -2    1.993    0.478    bs  ?
+Rb 1   O  -2    2.081    0.415    c   '7
+Rb 1   S  -2    2.700    0.370    b   ?
+Rb 1   S  -2    2.299    0.553    c   '7
+Rb 1   S  -2    2.800    0.370    e   unchecked
+Rb 1   Se -2    2.810    0.370    b   ?
+Rb 1   Se -2    2.389    0.587    c   '7
+Rb 1   Te -2    3.000    0.370    b   ?
+Rb 1   Te -2    2.417    0.633    c   '8
+Rb 1   F  -1    2.160    0.370    b   ?
+Rb 1   F  -1    1.972    0.412    c   '6
+Rb 1   F  -1    2.200    0.370    e   unchecked
+Rb 1   Cl -1    2.652    0.370    a   ?
+Rb 1   Cl -1    2.265    0.531    c   '7
+Rb 1   Br -1    2.780    0.370    b   ?
+Rb 1   Br -1    2.330    0.578    c   '7
+Rb 1   Br -1    2.860    0.370    e   unchecked
+Rb 1   I  -1    3.010    0.370    b   ?
+Rb 1   I  -1    2.451    0.638    c   '7
+Rb 1   I  -1    3.120    0.370    e   unchecked
+Rb 1   N  -3    2.620    0.370    e   unchecked
+Rb 1   N  -3    2.370    0.370    b   ?
+Rb 1   P  -3    2.760    0.370    b   ?
+Rb 1   As -3    2.870    0.370    b   ?
+Rb 1   H  -1    2.260    0.370    b   ?
+Re 1   Cl -1    2.620    0.350    e   unchecked
+Re 3   O  -2    1.900    0.350    e   unchecked
+Re 3   Cl -1    2.230    0.370    e   unchecked
+Re 4   F  -1    1.810    0.370    e   unchecked
+Re 4   Cl -1    2.230    0.370    e   unchecked
+Re 4   Br -1    2.350    0.370    e   unchecked
+Re 5   O  -2    1.834    0.557    bs  'small
+Re 5   O  -2    1.860    0.370    e   ?
+Re 5   Cl -1    2.240    0.370    e   unchecked
+Re 6   F  -1    1.790    0.370    e   unchecked
+Re 7   O  -2    1.943    0.406    bs  ?
+Re 7   O  -2    1.970    0.370    e   unchecked
+Re 7   F  -1    1.860    0.370    b   ?
+Re 7   Cl -1    2.230    0.370    b   ?
+Re 9   Br -1    2.450    0.370    b   ?
+Re 9   I  -1    2.610    0.370    b   ?
+Re 9   S  -2    2.370    0.370    b   ?
+Re 9   Se -2    2.500    0.370    b   ?
+Re 9   Te -2    2.700    0.370    b   ?
+Re 9   N  -3    2.060    0.370    b   ?
+Re 9   P  -3    2.460    0.370    b   ?
+Re 9   As -3    2.540    0.370    b   ?
+Re 9   H  -1    1.750    0.370    b   ?
+Rh 3   O  -2    1.793    0.370    b   ?
+Rh 3   O  -2    1.769    0.369    bs  'Ro
+Rh 3   F  -1    1.710    0.370    b   ?
+Rh 3   Cl -1    2.080    0.370    e   unchecked
+Rh 3   Cl -1    2.170    0.370    b   ?
+Rh 3   Br -1    2.270    0.350    e   unchecked
+Rh 3   N  -3    1.820    0.350    e   unchecked
+Rh 4   O  -2    1.836    0.422    bs  'Small
+Rh 4   F  -1    1.590    0.370    e   unchecked
+Rh 5   F  -1    1.800    0.370    e   unchecked
+Rh 9   Br -1    2.250    0.370    b   ?
+Rh 9   I  -1    2.480    0.370    b   ?
+Rh 9   S  -2    2.150    0.370    b   ?
+Rh 9   Se -1    2.330    0.370    b   ?
+Rh 9   Te -2    2.550    0.370    b   ?
+Rh 9   N  -3    1.880    0.370    b   ?
+Rh 9   P  -3    2.290    0.370    b   ?
+Rh 9   As -3    2.370    0.370    b   ?
+Rh 9   H  -1    1.550    0.370    b   ?
+Ru 2   Se -2    2.110    0.350    e   unchecked
+Ru 2   F  -1    1.840    0.350    e   unchecked
+Ru 3   O  -2    1.770    0.370    o   ?
+Ru 3   O  -2    1.745    0.401    bs  'Small
+Ru 3   S  -2    2.200    0.350    e   unchecked
+Ru 3   F  -1    2.120    0.370    e   unchecked
+Ru 3   Cl -1    2.250    0.370    e   unchecked
+Ru 3   N  -3    1.820    0.350    e   unchecked
+Ru 4   O  -2    1.833    0.366    bs  'Small
+Ru 4   O  -2    1.834    0.370    b   ?
+Ru 4   S  -2    2.210    0.370    e   unchecked
+Ru 4   F  -1    1.740    0.370    b   ?
+Ru 4   Cl -1    2.210    0.370    b   ?
+Ru 5   O  -2    1.900    0.370    o   ?
+Ru 5   O  -2    1.894    0.346    bs  'Ro
+Ru 5   F  -1    1.820    0.370    e   unchecked
+Ru 5   Cl -1    2.230    0.350    e   unchecked
+Ru 6   O  -2    1.870    0.350    e   unchecked
+Ru 7   O  -2    1.990    0.370    e   unchecked
+Ru 9   Br -1    2.260    0.370    b   ?
+Ru 9   I  -1    2.480    0.370    b   ?
+Ru 9   S  -2    2.160    0.370    b   ?
+Ru 9   Se -2    2.330    0.370    b   ?
+Ru 9   Te -2    2.540    0.370    b   ?
+Ru 9   N  -3    1.880    0.370    b   ?
+Ru 9   P  -3    2.290    0.370    b   ?
+Ru 9   As -3    2.360    0.370    b   ?
+Ru 9   H  -1    1.610    0.370    b   ?
+S  2   O  -2    1.740    0.370    e   unchecked
+S  2   S  -2    2.030    0.370    e   unchecked
+S  2   N  -2    1.597    0.370    a   ?
+S  2   N  -3    1.682    0.370    a   ?
+S  2   S   2    2.100    0.350    e   unchecked
+S  4   O  -2    1.644    0.370    a   ?
+S  4   O  -2    1.643    0.399    bs  'B
+S  4   S  -4    2.350    0.370    e   unchecked
+S  4   F  -1    1.600    0.370    b   ?
+S  4   Cl -1    2.020    0.370    b   ?
+S  4   N  -3    1.762    0.370    a   ?
+S  6   O  -2    1.624    0.370    a   ?
+S  6   O  -2    1.634    0.399    bs  'B
+S  6   F  -1    1.560    0.370    b   ?
+S  6   Cl -1    2.030    0.370    b   ?
+S  6   N  -3    1.720    0.370    e   unchecked
+S  9   Br -1    2.170    0.370    b   ?
+S  9   I  -1    2.360    0.370    b   ?
+S  9   S  -2    2.070    0.370    b   ?
+S  9   Se -2    2.210    0.370    b   ?
+S  9   Te -2    2.450    0.370    b   ?
+S  9   N  -3    1.740    0.370    b   ?
+S  9   P  -3    2.150    0.370    b   ?
+S  9   As -3    2.250    0.370    b   ?
+S  9   H  -1    1.380    0.370    b   ?
+Sb 3   O  -2    1.885    0.530    bj  ?
+Sb 3   O  -2    1.927    0.446    bg  ?
+Sb 3   O  -2    1.925    0.455    be  ?
+Sb 3   O  -2    1.932    0.435    bs  ?
+Sb 3   O  -2    1.924    0.470    bd  ?
+Sb 3   O  -2    1.955    0.370    an  ?
+Sb 3   S  -2    2.380    0.500    e   unchecked
+Sb 3   S  -2    2.474    0.370    a   ?
+Sb 3   Se -2    2.600    0.370    e   unchecked
+Sb 3   F  -1    1.883    0.370    a   ?
+Sb 3   F  -1    1.900    0.370    b   ?
+Sb 3   Cl -1    2.350    0.370    b   ?
+Sb 3   Br -1    2.510    0.370    e   unchecked
+Sb 3   I  -1    2.760    0.370    e   unchecked
+Sb 3   N  -3    2.108    0.370    d   ?
+Sb 5   O  -2    1.904    0.430    be  ?
+Sb 5   O  -2    1.892    0.475    bs  'Ro
+Sb 5   O  -2    1.912    0.370    an  ?
+Sb 5   O  -2    1.908    0.409    aw  'small
+Sb 5   F  -1    1.797    0.370    a   ?
+Sb 5   Cl -1    2.300    0.370    b   ?
+Sb 5   Br -1    2.480    0.370    e   unchecked
+Sb 5   N  -3    1.990    0.350    e   unchecked
+Sb 9   O  -2    1.934    0.370    an  'use
+Sb 9   S  -2    2.450    0.370    b   ?
+Sb 9   Se -2    2.570    0.370    b   ?
+Sb 9   Te -2    2.780    0.370    b   ?
+Sb 9   Br -1    2.500    0.370    b   ?
+Sb 9   I  -1    2.720    0.370    b   ?
+Sb 9   N  -3    2.120    0.370    b   ?
+Sb 9   P  -3    2.520    0.370    b   ?
+Sb 9   As -3    2.600    0.370    b   ?
+Sb 9   H  -1    2.770    0.370    b   ?
+Sc 3   O  -2    1.849    0.370    a   ?
+Sc 3   O  -2    1.780    0.452    bs  ?
+Sc 3   O  -2    1.877    0.350    o   ?
+Sc 3   S  -2    2.321    0.370    a   ?
+Sc 3   Se -2    2.440    0.370    b   ?
+Sc 3   Te -2    2.640    0.370    b   ?
+Sc 3   F  -1    1.760    0.370    b   ?
+Sc 3   Cl -1    2.360    0.370    e   unchecked
+Sc 3   Cl -1    2.230    0.370    b   ?
+Sc 3   Br -1    2.380    0.370    b   ?
+Sc 3   I  -1    2.590    0.370    b   ?
+Sc 3   N  -3    1.980    0.370    b   ?
+Sc 3   P  -3    2.400    0.370    b   ?
+Sc 3   As -3    2.480    0.370    b   ?
+Sc 3   H  -1    1.680    0.370    b   ?
+Se 2   S  -2    2.210    0.370    e   unchecked
+Se 2   Se -2    2.330    0.370    e   unchecked
+Se 4   O  -2    1.811    0.370    a   ?
+Se 4   O  -2    1.805    0.401    bs  ?
+Se 4   F  -1    1.730    0.370    b   ?
+Se 4   Cl -1    2.220    0.370    b   ?
+Se 4   Br -1    2.430    0.370    e   unchecked
+Se 6   O  -2    1.788    0.370    a   ?
+Se 6   O  -2    1.797    0.399    bs  'B
+Se 6   F  -1    1.690    0.370    b   ?
+Se 6   Cl -1    2.160    0.370    b   ?
+Se 6   N  -3    1.900    0.350    e   unchecked
+Se 9   Br -1    2.330    0.370    b   ?
+Se 9   I  -1    2.540    0.370    b   ?
+Se 9   S  -2    2.250    0.370    b   ?
+Se 9   Se -2    2.360    0.370    b   ?
+Se 9   Te -2    2.550    0.370    b   ?
+Se 9   P  -3    2.340    0.370    b   ?
+Se 9   As -3    2.420    0.370    b   ?
+Se 9   H  -1    1.540    0.370    b   ?
+Si 4   O  -2    1.624    0.370    b   ?
+Si 4   O  -2    1.622    0.370    au  ?
+Si 4   O  -2    1.640    0.370    a   ?
+Si 4   O  -2    1.624    0.389    bs  ?
+Si 4   S  -2    2.126    0.370    a   ?
+Si 4   Se -2    2.260    0.370    b   ?
+Si 4   Te -2    2.490    0.370    b   ?
+Si 4   F  -1    1.580    0.370    b   ?
+Si 4   Cl -1    2.030    0.370    b   ?
+Si 4   Br -1    2.200    0.370    b   ?
+Si 4   I  -1    2.410    0.370    b   ?
+Si 4   C  -4    1.883    0.370    a   ?
+Si 4   N  -3    1.724    0.370    a   ?
+Si 4   N  -3    1.770    0.370    b   ?
+Si 4   P  -3    2.230    0.370    b   ?
+Si 4   As -3    2.310    0.370    b   ?
+Si 4   H  -1    1.470    0.370    b   ?
+Sm 2   O  -2    2.116    0.370    ai  ?
+Sm 2   O  -2    2.126    0.370    al  ?
+Sm 2   N  -3    2.267    0.370    al  ?
+Sm 3   O  -2    2.088    0.370    b   ?
+Sm 3   O  -2    2.049    0.404    bs  ?
+Sm 3   O  -2    2.063    0.370    ae  'from
+Sm 3   O  -2    2.055    0.370    ai  'from
+Sm 3   S  -2    2.550    0.370    b   ?
+Sm 3   S  -2    2.538    0.370    al  ?
+Sm 3   Se -2    2.670    0.370    b   ?
+Sm 3   Te -2    2.860    0.370    b   ?
+Sm 3   F  -1    1.940    0.400    p   ?
+Sm 3   F  -1    2.000    0.370    e   unchecked
+Sm 3   Cl -1    2.466    0.370    b   ?
+Sm 3   Cl -1    2.481    0.370    al  ?
+Sm 3   Cl -1    2.430    0.400    p   ?
+Sm 3   Br -1    2.660    0.370    b   ?
+Sm 3   Br -1    2.580    0.400    p   ?
+Sm 3   I  -1    2.840    0.370    b   ?
+Sm 3   I  -1    2.800    0.400    p   ?
+Sm 3   N  -3    2.171    0.370    ah  ?
+Sm 3   N  -3    2.240    0.370    b   ?
+Sm 3   P  -3    2.630    0.370    b   ?
+Sm 3   As -3    2.700    0.370    b   ?
+Sm 3   H  -1    1.960    0.370    b   ?
+Sn 2   O  -2    1.849    0.500    bd  ?
+Sn 2   O  -2    1.859    0.550    bh  ?
+Sn 2   O  -2    1.910    0.451    bs  ?
+Sn 2   O  -2    1.984    0.370    b   ?
+Sn 2   O  -2    1.956    0.370    bn  'in
+Sn 2   S  -2    2.350    0.500    e   unchecked
+Sn 2   S  -2    2.423    0.370    bn  'in
+Sn 2   Se -2    2.476    0.370    bn  'in
+Sn 2   Te -2    2.747    0.370    bn  'in
+Sn 2   F  -1    1.925    0.370    a   ?
+Sn 2   F  -1    1.869    0.370    bn  'in
+Sn 2   Cl -1    2.335    0.430    bi  'Ro
+Sn 2   Cl -1    2.330    0.370    bn  'in
+Sn 2   Cl -1    2.360    0.370    b   ?
+Sn 2   Br -1    2.500    0.370    bn  'in
+Sn 2   I  -1    2.752    0.370    bn  'in
+Sn 2   N  -3    2.046    0.370    bn  'in
+Sn 2   P  -3    2.488    0.370    bn  'in
+Sn 2   As -3    2.585    0.370    bn  'in
+Sn 2   C  -4    2.077    0.370    bn  'in
+Sn 4   O  -2    1.905    0.370    a   ?
+Sn 4   O  -2    1.946    0.274    bs  ?
+Sn 4   S  -2    2.399    0.370    a   ?
+Sn 4   S  -2    2.393    0.370    bn  'in
+Sn 4   Se -2    2.524    0.370    bn  'in
+Sn 4   F  -1    1.843    0.370    a   ?
+Sn 4   F  -1    1.802    0.370    bn  'in
+Sn 4   Cl -1    2.276    0.370    a   ?
+Sn 4   Br -1    2.444    0.370    bn  'in
+Sn 4   I  -1    2.700    0.370    bn  'in
+Sn 4   N  -3    2.024    0.370    bn  'in
+Sn 9   Br -1    2.550    0.370    b   ?
+Sn 9   I  -1    2.760    0.370    b   ?
+Sn 9   S  -2    2.390    0.370    aa  ?
+Sn 9   S  -2    2.450    0.370    b   ?
+Sn 9   Se -2    2.590    0.370    b   ?
+Sn 9   Te -2    2.760    0.370    b   ?
+Sn 9   N  -3    2.060    0.370    aa  ?
+Sn 9   N  -3    2.140    0.370    b   ?
+Sn 9   P  -3    2.450    0.370    b   ?
+Sn 9   As -3    2.620    0.370    b   ?
+Sn 9   H  -1    1.850    0.370    b   ?
+Sr 2   O  -2    2.118    0.370    a   ?
+Sr 2   O  -2    2.090    0.370    bt  'organic
+Sr 2   O  -2    1.958    0.479    bs  ?
+Sr 2   S  -2    2.590    0.370    b   ?
+Sr 2   S  -2    2.650    0.370    e   unchecked
+Sr 2   Se -2    2.720    0.370    b   ?
+Sr 2   Te -2    2.870    0.370    b   ?
+Sr 2   Te -2    2.060    0.370    e   unchecked
+Sr 2   F  -1    2.019    0.370    b   ?
+Sr 2   Cl -1    2.510    0.370    b   ?
+Sr 2   Br -1    2.680    0.370    b   ?
+Sr 2   I  -1    2.880    0.370    b   ?
+Sr 2   N  -3    2.230    0.370    b   ?
+Sr 2   P  -3    2.670    0.370    b   ?
+Sr 2   As -3    2.760    0.370    b   ?
+Sr 2   H  -1    2.010    0.370    b   ?
+Ta 4   O  -2    2.290    0.370    e   unchecked
+Ta 5   O  -2    1.920    0.370    a   ?
+Ta 5   O  -2    1.916    0.343    bs  ?
+Ta 5   S  -2    2.470    0.370    e   unchecked
+Ta 5   F  -1    1.880    0.370    b   ?
+Ta 5   Cl -1    2.300    0.370    b   ?
+Ta 9   Br -1    2.450    0.370    b   ?
+Ta 9   I  -1    2.660    0.370    b   ?
+Ta 9   S  -2    2.390    0.370    b   ?
+Ta 9   Se -2    2.510    0.370    b   ?
+Ta 9   Te -2    2.700    0.370    b   ?
+Ta 9   N  -3    2.010    0.370    b   ?
+Ta 9   P  -3    2.470    0.370    b   ?
+Ta 9   As -3    2.550    0.370    b   ?
+Ta 9   H  -1    1.760    0.370    b   ?
+Tb 3   O  -2    2.032    0.370    a   ?
+Tb 3   O  -2    2.049    0.370    b   ?
+Tb 3   O  -2    2.020    0.379    bs  ?
+Tb 3   O  -2    2.013    0.370    ae  'from
+Tb 3   S  -2    2.510    0.370    b   ?
+Tb 3   S  -2    2.498    0.370    al  ?
+Tb 3   Se -2    2.630    0.370    b   ?
+Tb 3   Te -2    2.820    0.370    b   ?
+Tb 3   F  -1    1.936    0.370    b   ?
+Tb 3   F  -1    1.900    0.400    p   ?
+Tb 3   Cl -1    2.427    0.370    b   ?
+Tb 3   Cl -1    2.437    0.370    al  ?
+Tb 3   Cl -1    2.390    0.400    p   ?
+Tb 3   Br -1    2.580    0.370    b   ?
+Tb 3   Br -1    2.540    0.400    p   ?
+Tb 3   I  -1    2.800    0.370    b   ?
+Tb 3   I  -1    2.770    0.400    p   ?
+Tb 3   N  -3    2.130    0.370    ah  ?
+Tb 3   N  -3    2.200    0.370    b   ?
+Tb 3   P  -3    2.590    0.370    b   ?
+Tb 3   As -3    2.660    0.370    b   ?
+Tb 3   H  -1    1.910    0.370    b   ?
+Tb 4   O  -2    2.018    0.395    bs  'Small
+Tc 3   O  -2    1.768    0.370    as  'small
+Tc 4   O  -2    1.841    0.370    as  'small
+Tc 4   F  -1    1.880    0.400    p   ?
+Tc 4   Cl -1    2.210    0.370    e   unchecked
+Tc 5   O  -2    1.859    0.370    as  '6-coordination,
+Tc 5   O  -2    1.870    0.370    as  '5-coordination,
+Tc 6   O  -2    1.955    0.370    as  'small
+Tc 7   O  -2    1.909    0.370    as  ?
+Tc 7   O  -2    1.915    0.375    bs  'Small
+Te 4   O  -2    1.955    0.440    bd  ?
+Te 4   O  -2    1.960    0.389    bs  ?
+Te 4   O  -2    1.960    0.410    bk  'cut
+Te 4   O  -2    1.977    0.370    a   ?
+Te 4   S  -2    2.440    0.370    e   unchecked
+Te 4   F  -1    1.870    0.370    b   ?
+Te 4   Cl -1    2.312    0.560    bk  'cut
+Te 4   Cl -1    2.370    0.370    b   ?
+Te 4   Br -1    2.550    0.370    e   unchecked
+Te 4   I  -1    2.782    0.370    bp  ?
+Te 6   O  -2    1.917    0.370    a   ?
+Te 6   O  -2    1.922    0.387    bs  'B
+Te 6   O  -2    1.921    0.560    bk  'cut
+Te 6   F  -1    1.820    0.370    b   ?
+Te 6   Cl -1    2.300    0.370    b   ?
+Te 9   Br -1    2.530    0.370    b   ?
+Te 9   I  -1    2.760    0.370    b   ?
+Te 9   S  -2    2.450    0.370    b   ?
+Te 9   Se -2    2.530    0.370    b   ?
+Te 9   Te -2    2.760    0.370    b   ?
+Te 9   N  -3    2.120    0.370    b   ?
+Te 9   P  -3    2.520    0.370    b   ?
+Te 9   As -3    2.600    0.370    b   ?
+Te 9   H  -1    1.830    0.370    b   ?
+Th 4   O  -2    2.167    0.370    b   ?
+Th 4   O  -2    2.117    0.420    bs  ?
+Th 4   O  -2    2.180    0.350    p   ?
+Th 4   S  -2    2.640    0.370    b   ?
+Th 4   Se -2    2.760    0.370    b   ?
+Th 4   Te -2    2.940    0.370    b   ?
+Th 4   F  -1    2.068    0.370    a   ?
+Th 4   F  -1    2.050    0.400    p   ?
+Th 4   Cl -1    2.550    0.370    b   ?
+Th 4   Cl -1    2.520    0.400    p   ?
+Th 4   Br -1    2.710    0.370    b   ?
+Th 4   Br -1    2.680    0.400    p   ?
+Th 4   I  -1    2.930    0.370    b   ?
+Th 4   I  -1    2.920    0.400    p   ?
+Th 4   I  -1    2.960    0.370    e   unchecked
+Th 4   N  -3    2.340    0.370    b   ?
+Th 4   P  -3    2.730    0.370    b   ?
+Th 4   As -3    2.800    0.370    b   ?
+Th 4   H  -1    2.070    0.370    b   ?
+Ti 2   F  -1    2.150    0.370    e   unchecked
+Ti 2   Cl -1    2.310    0.370    e   unchecked
+Ti 2   Br -1    2.490    0.370    e   unchecked
+Ti 3   O  -2    1.654    0.545    bs  ?
+Ti 3   O  -2    1.791    0.370    b   ?
+Ti 3   S  -2    2.110    0.370    e   unchecked
+Ti 3   F  -1    1.723    0.370    b   ?
+Ti 3   Cl -1    2.220    0.370    e   unchecked
+Ti 3   Cl -1    2.170    0.370    b   ?
+Ti 3   I  -1    2.520    0.370    e   unchecked
+Ti 4   O  -2    1.815    0.370    a   ?
+Ti 4   O  -2    1.819    0.342    bs  ?
+Ti 4   O  -2    1.780    0.430    o   ?
+Ti 4   S  -2    2.290    0.370    e   unchecked
+Ti 4   F  -1    1.760    0.370    b   ?
+Ti 4   Cl -1    2.190    0.370    b   ?
+Ti 4   Br -1    2.360    0.370    e   unchecked
+Ti 9   O  -2    1.790    0.370    k   'from
+Ti 9   Cl -1    2.184    0.370    k   'from
+Ti 9   Br -1    2.320    0.370    b   ?
+Ti 9   I  -1    2.540    0.370    b   ?
+Ti 9   S  -2    2.240    0.370    b   ?
+Ti 9   Se -2    2.380    0.370    b   ?
+Ti 9   Te -2    2.600    0.370    b   ?
+Ti 9   N  -3    1.930    0.370    b   ?
+Ti 9   N  -3    1.906    0.370    k   'from
+Ti 9   P  -3    2.360    0.370    b   ?
+Ti 9   As -3    2.420    0.370    b   ?
+Ti 9   H  -1    1.610    0.370    b   ?
+Tl 1   O  -2    2.124    0.370    a   ?
+Tl 1   O  -2    2.063    0.422    bs  ?
+Tl 1   O  -2    2.172    0.370    b   ?
+Tl 1   O  -2    2.162    0.370    bm  'in
+Tl 1   O  -2    1.927    0.500    af  'inorganic
+Tl 1   S  -2    2.545    0.370    a   ?
+Tl 1   F  -1    2.150    0.370    b   ?
+Tl 1   Cl -1    2.560    0.370    b   ?
+Tl 1   Cl -1    2.610    0.370    e   unchecked
+Tl 1   Br -1    2.690    0.370    e   unchecked
+Tl 1   I  -1    2.822    0.370    a   ?
+Tl 1   N  -3    2.286    0.370    bm  'in
+Tl 3   O  -2    2.003    0.370    b   ?
+Tl 3   O  -2    1.874    0.504    bs  'Small
+Tl 3   O  -2    2.162    0.370    bm  'in
+Tl 3   F  -1    1.880    0.370    b   ?
+Tl 3   Cl -1    2.320    0.370    b   ?
+Tl 3   Br -1    2.650    0.350    e   unchecked
+Tl 3   N  -3    2.014    0.370    bm  'in
+Tl 9   Br -1    2.700    0.370    b   ?
+Tl 9   I  -1    2.910    0.370    b   ?
+Tl 9   S  -2    2.630    0.370    b   ?
+Tl 9   Se -2    2.700    0.370    b   ?
+Tl 9   Te -2    2.930    0.370    b   ?
+Tl 9   N  -3    2.290    0.370    b   ?
+Tl 9   P  -3    2.710    0.370    b   ?
+Tl 9   As -3    2.790    0.370    b   ?
+Tl 9   H  -1    2.050    0.370    b   ?
+Tm 3   O  -2    2.000    0.370    b   ?
+Tm 3   O  -2    1.977    0.381    bs  ?
+Tm 3   O  -2    1.968    0.370    ae  'from
+Tm 3   S  -2    2.450    0.370    b   ?
+Tm 3   Se -2    2.580    0.370    b   ?
+Tm 3   Te -2    2.770    0.370    b   ?
+Tm 3   F  -1    1.842    0.370    b   ?
+Tm 3   F  -1    1.860    0.400    p   ?
+Tm 3   F  -1    1.910    0.370    e   unchecked
+Tm 3   Cl -1    2.380    0.370    b   ?
+Tm 3   Cl -1    2.381    0.370    al  ?
+Tm 3   Cl -1    2.350    0.400    p   ?
+Tm 3   Br -1    2.530    0.370    b   ?
+Tm 3   Br -1    2.500    0.400    p   ?
+Tm 3   I  -1    2.740    0.370    b   ?
+Tm 3   I  -1    2.740    0.400    p   ?
+Tm 3   N  -3    2.140    0.370    b   ?
+Tm 3   P  -3    2.530    0.370    b   ?
+Tm 3   As -3    2.620    0.370    b   ?
+Tm 3   H  -1    1.850    0.370    b   ?
+U  2   O  -2    2.080    0.370    e   unchecked
+U  3   S  -2    2.540    0.370    e   unchecked
+U  3   F  -1    2.020    0.400    p   ?
+U  3   F  -1    2.090    0.370    e   unchecked
+U  3   Cl -1    2.490    0.400    p   ?
+U  3   Br -1    2.640    0.400    p   ?
+U  3   I  -1    2.870    0.400    p   ?
+U  4   O  -2    2.112    0.370    b   ?
+U  4   O  -2    2.100    0.373    bs  ?
+U  4   O  -2    2.130    0.350    p   ?
+U  4   S  -2    2.550    0.370    e   unchecked
+U  4   F  -1    2.038    0.370    a   ?
+U  4   F  -1    2.034    0.370    b   ?
+U  4   F  -1    2.000    0.400    p   ?
+U  4   Cl -1    2.470    0.400    p   ?
+U  4   Br -1    2.600    0.400    p   ?
+U  4   Br -1    2.610    0.370    e   unchecked
+U  4   I  -1    2.880    0.370    e   unchecked
+U  4   N  -3    2.180    0.370    e   unchecked
+U  5   O  -2    2.075    0.370    b   ?
+U  5   O  -2    2.009    0.660    bs  'small
+U  5   O  -2    2.100    0.350    p   ?
+U  5   F  -1    1.966    0.370    b   ?
+U  5   F  -1    1.990    0.400    p   ?
+U  5   Cl -1    2.460    0.370    b   ?
+U  5   Cl -1    2.430    0.400    p   ?
+U  5   Br -1    2.700    0.350    e   unchecked
+U  6   O  -2    2.051    0.519    r   ?
+U  6   O  -2    2.046    0.473    bs  ?
+U  6   O  -2    2.045    0.519    bo  ?
+U  6   O  -2    2.075    0.370    a   ?
+U  6   O  -2    2.080    0.350    p   ?
+U  6   F  -1    1.980    0.400    p   ?
+U  6   Cl -1    2.420    0.400    p   ?
+U  6   N  -3    1.930    0.350    e   unchecked
+U  9   Br -1    2.630    0.370    b   ?
+U  9   I  -1    2.840    0.370    b   ?
+U  9   S  -2    2.560    0.370    b   ?
+U  9   Se -2    2.700    0.370    b   ?
+U  9   Te -2    2.860    0.370    b   ?
+U  9   N  -3    2.240    0.370    b   ?
+U  9   P  -3    2.640    0.370    b   ?
+U  9   As -3    2.720    0.370    b   ?
+U  9   H  -1    1.970    0.370    b   ?
+V  1   O  -2    1.880    0.370    e   unchecked
+V  1   Cl -1    2.000    0.350    e   unchecked
+V  2   O  -2    1.700    0.370    e   unchecked
+V  2   S  -2    2.110    0.370    e   unchecked
+V  2   F  -1    2.160    0.370    e   unchecked
+V  2   Cl -1    2.440    0.370    e   unchecked
+V  3   O  -2    1.743    0.370    a   ?
+V  3   O  -2    1.718    0.412    bs  ?
+V  3   O  -2    1.749    0.370    j   'from
+V  3   S  -2    2.170    0.370    e   unchecked
+V  3   S  -2    2.185    0.370    j   ?
+V  3   F  -1    1.702    0.370    b   ?
+V  3   Cl -1    2.190    0.370    b   ?
+V  3   Br -1    2.330    0.350    e   unchecked
+V  3   N  -3    1.813    0.370    j   'from
+V  3   N  -3    1.840    0.350    e   unchecked
+V  4   O  -2    1.784    0.370    a   ?
+V  4   O  -2    1.776    0.364    bs  ?
+V  4   O  -2    1.780    0.370    j   'from
+V  4   O  -2    1.735    0.370    j   'vanadyl
+V  4   S  -2    2.226    0.370    j   'from
+V  4   S  -2    2.181    0.370    j   'vanadyl
+V  4   S  -2    2.240    0.370    e   unchecked
+V  4   F  -1    1.700    0.370    b   ?
+V  4   Cl -1    2.160    0.370    b   ?
+V  4   N  -3    1.875    0.370    j   'from
+V  5   O  -2    1.803    0.370    a   ?
+V  5   O  -2    1.799    0.388    bs  ?
+V  5   O  -2    1.799    0.370    x   ?
+V  5   S  -2    2.250    0.370    e   unchecked
+V  5   F  -1    1.700    0.370    e   unchecked
+V  5   Cl -1    2.160    0.370    b   ?
+V  9   O  -2    1.788    0.320    ag  'all
+V  9   O  -2    1.810    0.340    o   ?
+V  9   Br -1    2.300    0.370    b   ?
+V  9   I  -1    2.510    0.370    b   ?
+V  9   S  -2    2.230    0.370    b   ?
+V  9   Se -2    2.330    0.370    b   ?
+V  9   Te -2    2.570    0.370    b   ?
+V  9   N  -3    1.860    0.370    b   ?
+V  9   P  -3    2.310    0.370    b   ?
+V  9   As -3    2.390    0.370    b   ?
+V  9   H  -1    1.580    0.370    b   ?
+W  4   O  -2    1.851    0.370    aj  ?
+W  5   O  -2    1.881    0.370    aj  ?
+W  5   O  -2    1.848    0.553    bs  'Small
+W  6   O  -2    1.917    0.370    a   ?
+W  6   O  -2    1.909    0.339    bs  ?
+W  6   O  -2    1.916    0.410    x   ?
+W  6   O  -2    1.921    0.370    b   ?
+W  6   O  -2    1.906    0.370    aj  ?
+W  6   F  -1    1.830    0.370    b   ?
+W  6   Cl -1    2.270    0.370    b   ?
+W  9   O  -2    1.896    0.280    aj  'fitted
+W  9   Br -1    2.450    0.370    b   ?
+W  9   I  -1    2.660    0.370    b   ?
+W  9   S  -2    2.390    0.370    b   ?
+W  9   Se -2    2.510    0.370    b   ?
+W  9   Te -2    2.710    0.370    b   ?
+W  9   N  -3    2.060    0.370    b   ?
+W  9   P  -3    2.460    0.370    b   ?
+W  9   As -3    2.540    0.370    b   ?
+W  9   H  -1    1.760    0.370    b   ?
+Xe 2   O  -2    2.050    0.350    e   unchecked
+Xe 2   F  -1    2.020    0.370    e   unchecked
+Xe 4   F  -1    1.930    0.370    e   unchecked
+Xe 6   O  -2    2.000    0.370    e   unchecked
+Xe 6   F  -1    1.890    0.370    e   unchecked
+Xe 8   O  -2    1.940    0.370    e   unchecked
+Y  3   O  -2    2.028    0.350    bj  ?
+Y  3   O  -2    1.978    0.407    bs  ?
+Y  3   O  -2    2.019    0.370    a   ?
+Y  3   O  -2    2.014    0.370    b   ?
+Y  3   S  -2    2.480    0.370    b   ?
+Y  3   Se -2    2.610    0.370    b   ?
+Y  3   Te -2    2.800    0.370    b   ?
+Y  3   F  -1    1.904    0.370    b   ?
+Y  3   F  -1    1.870    0.370    e   unchecked
+Y  3   Cl -1    2.400    0.370    b   ?
+Y  3   Br -1    2.550    0.370    b   ?
+Y  3   I  -1    2.770    0.370    b   ?
+Y  3   N  -3    2.170    0.370    b   ?
+Y  3   P  -3    2.570    0.370    b   ?
+Y  3   As -3    2.640    0.370    b   ?
+Y  3   H  -1    1.860    0.370    b   ?
+Yb 2   O  -2    1.989    0.370    al  ?
+Yb 2   N  -3    2.092    0.370    al  ?
+Yb 3   O  -2    1.965    0.370    a   ?
+Yb 3   O  -2    1.969    0.373    bs  ?
+Yb 3   O  -2    1.985    0.370    b   ?
+Yb 3   O  -2    1.954    0.370    ae  'from
+Yb 3   S  -2    2.430    0.370    b   ?
+Yb 3   Se -2    2.560    0.370    b   ?
+Yb 3   Te -2    2.760    0.370    b   ?
+Yb 3   F  -1    1.875    0.370    b   ?
+Yb 3   F  -1    1.850    0.400    p   ?
+Yb 3   F  -1    1.900    0.370    e   unchecked
+Yb 3   Cl -1    2.371    0.370    b   ?
+Yb 3   Cl -1    2.376    0.370    al  ?
+Yb 3   Cl -1    2.340    0.400    p   ?
+Yb 3   Br -1    2.451    0.370    b   ?
+Yb 3   Br -1    2.490    0.400    p   ?
+Yb 3   I  -1    2.720    0.370    b   ?
+Yb 3   I  -1    2.740    0.400    p   ?
+Yb 3   N  -3    2.064    0.370    ah  ?
+Yb 3   N  -3    2.120    0.370    b   ?
+Yb 3   P  -3    2.530    0.370    b   ?
+Yb 3   As -3    2.590    0.370    b   ?
+Yb 3   H  -1    1.820    0.370    b   ?
+Zn 2   O  -2    1.704    0.370    a   ?
+Zn 2   O  -2    1.684    0.383    bs  ?
+Zn 2   O  -2    1.675    0.390    o   ?
+Zn 2   S  -2    2.090    0.370    b   ?
+Zn 2   Se -2    2.220    0.370    b   ?
+Zn 2   Te -2    2.450    0.370    b   ?
+Zn 2   F  -1    1.620    0.370    b   ?
+Zn 2   F  -1    1.670    0.370    e   unchecked
+Zn 2   Cl -1    2.010    0.370    b   ?
+Zn 2   Br -1    2.150    0.370    b   ?
+Zn 2   I  -1    2.360    0.370    b   ?
+Zn 2   N  -3    1.770    0.370    b   ?
+Zn 2   P  -3    2.150    0.370    b   ?
+Zn 2   As -3    2.240    0.370    b   ?
+Zn 2   H  -1    1.420    0.370    b   ?
+Zr 2   O  -2    2.340    0.370    e   unchecked
+Zr 2   F  -1    2.240    0.370    e   unchecked
+Zr 2   Cl -1    2.580    0.370    e   unchecked
+Zr 4   O  -2    1.928    0.370    a   ?
+Zr 4   O  -2    1.913    0.406    bs  ?
+Zr 4   O  -2    1.937    0.370    b   ?
+Zr 4   S  -2    2.410    0.370    b   ?
+Zr 4   Se -2    2.530    0.370    b   ?
+Zr 4   Te -2    2.670    0.370    b   ?
+Zr 4   F  -1    1.846    0.370    a   ?
+Zr 4   F  -1    1.854    0.370    b   ?
+Zr 4   Cl -1    2.330    0.370    b   ?
+Zr 4   Br -1    2.480    0.370    b   ?
+Zr 4   I  -1    2.690    0.370    b   ?
+Zr 4   N  -3    2.110    0.370    b   ?
+Zr 4   N  -3    2.150    0.370    e   unchecked
+Zr 4   P  -3    2.520    0.370    b   ?
+Zr 4   As -3    2.570    0.370    b   ?
+Zr 4   H  -1    1.790    0.370    b   ?
+Ag 1   I  -1    2.859    0.370    ?   Estimated from Shannon radii
+Ag 2   Br -1    2.483    0.370    ?   Estimated from Shannon radii
+Ag 2   F  -1    1.923    0.370    ?   Estimated from Shannon radii
+Ag 1   Cl -1    2.525    0.370    ?   Estimated from Shannon radii
+Ag 1   Br -1    2.654    0.370    ?   Estimated from Shannon radii
+Ag 2   Cl -1    2.355    0.370    ?   Estimated from Shannon radii
+Ag 2   I  -1    2.689    0.370    ?   Estimated from Shannon radii
+Ag 1   F  -1    2.093    0.370    ?   Estimated from Shannon radii
+Au 2   I  -1    2.493    0.370    ?   Estimated from Shannon radii
+Au 2   Cl -1    2.159    0.370    ?   Estimated from Shannon radii
+Au 2   Br -1    2.288    0.370    ?   Estimated from Shannon radii
+Au 1   I  -1    2.843    0.370    ?   Estimated from Shannon radii
+Au 1   Cl -1    2.509    0.370    ?   Estimated from Shannon radii
+Au 1   Br -1    2.638    0.370    ?   Estimated from Shannon radii
+Au 1   F  -1    2.077    0.370    ?   Estimated from Shannon radii
+Au 2   F  -1    1.727    0.370    ?   Estimated from Shannon radii
+Co 2   Cl -1    2.141    0.370    ?   Estimated from Shannon radii
+Co 2   Br -1    2.269    0.370    ?   Estimated from Shannon radii
+Co 2   F  -1    1.709    0.370    ?   Estimated from Shannon radii
+Co 2   I  -1    2.475    0.370    ?   Estimated from Shannon radii
+Co 1   I  -1    2.305    0.370    ?   Estimated from Shannon radii
+Co 1   Cl -1    1.970    0.370    ?   Estimated from Shannon radii
+Co 1   F  -1    1.538    0.370    ?   Estimated from Shannon radii
+Co 1   Br -1    2.099    0.370    ?   Estimated from Shannon radii
+Cs 1   Br -1    3.157    0.370    ?   Estimated from Shannon radii
+Cs 1   Cl -1    3.028    0.370    ?   Estimated from Shannon radii
+Cs 1   I  -1    3.363    0.370    ?   Estimated from Shannon radii
+Cs 1   Br -1    3.157    0.370    ?   Estimated from Shannon radii
+Cs 1   Cl -1    3.028    0.370    ?   Estimated from Shannon radii
+Cs 1   I  -1    3.363    0.370    ?   Estimated from Shannon radii
+Cs 1   F  -1    2.596    0.370    ?   Estimated from Shannon radii
+Cs 1   F  -1    2.596    0.370    ?   Estimated from Shannon radii
+Cu 2   I  -1    2.581    0.370    ?   Estimated from Shannon radii
+Cu 2   Cl -1    2.247    0.370    ?   Estimated from Shannon radii
+Cu 2   Br -1    2.376    0.370    ?   Estimated from Shannon radii
+Cu 2   F  -1    1.815    0.370    ?   Estimated from Shannon radii
+Cu 1   I  -1    2.588    0.370    ?   Estimated from Shannon radii
+Cu 1   Cl -1    2.253    0.370    ?   Estimated from Shannon radii
+Cu 1   F  -1    1.821    0.370    ?   Estimated from Shannon radii
+Cu 1   Br -1    2.382    0.370    ?   Estimated from Shannon radii
+Fe 2   Cl -1    2.241    0.370    ?   Estimated from Shannon radii
+Fe 1   F  -1    1.602    0.370    ?   Estimated from Shannon radii
+Fe 1   Br -1    2.163    0.370    ?   Estimated from Shannon radii
+Fe 2   I  -1    2.576    0.370    ?   Estimated from Shannon radii
+Fe 1   I  -1    2.369    0.370    ?   Estimated from Shannon radii
+Fe 2   F  -1    1.809    0.370    ?   Estimated from Shannon radii
+Fe 2   Br -1    2.370    0.370    ?   Estimated from Shannon radii
+Fe 1   Cl -1    2.035    0.370    ?   Estimated from Shannon radii
+Fr 1   Cl -1    3.096    0.370    ?   Estimated from Shannon radii
+Fr 1   F  -1    2.664    0.370    ?   Estimated from Shannon radii
+Fr 1   Br -1    3.225    0.370    ?   Estimated from Shannon radii
+Fr 1   Cl -1    3.096    0.370    ?   Estimated from Shannon radii
+Fr 1   I  -1    3.431    0.370    ?   Estimated from Shannon radii
+Fr 1   F  -1    2.664    0.370    ?   Estimated from Shannon radii
+Fr 1   Br -1    3.225    0.370    ?   Estimated from Shannon radii
+Fr 1   I  -1    3.431    0.370    ?   Estimated from Shannon radii
+H  1   F  -1    0.880    0.370    ?   Estimated from Shannon radii
+H  1   Br -1    1.441    0.370    ?   Estimated from Shannon radii
+H  1   Cl -1    1.312    0.370    ?   Estimated from Shannon radii
+H  1   I  -1    1.647    0.370    ?   Estimated from Shannon radii
+H  1   F  -1    0.880    0.370    ?   Estimated from Shannon radii
+H  1   Br -1    1.441    0.370    ?   Estimated from Shannon radii
+H  1   Cl -1    1.312    0.370    ?   Estimated from Shannon radii
+H  1   I  -1    1.647    0.370    ?   Estimated from Shannon radii
+Hg 1   F  -1    2.102    0.370    ?   Estimated from Shannon radii
+Hg 1   Br -1    2.662    0.370    ?   Estimated from Shannon radii
+Hg 1   Cl -1    2.534    0.370    ?   Estimated from Shannon radii
+Hg 1   I  -1    2.868    0.370    ?   Estimated from Shannon radii
+Hg 2   Br -1    2.618    0.370    ?   Estimated from Shannon radii
+Hg 2   Cl -1    2.490    0.370    ?   Estimated from Shannon radii
+Hg 2   I  -1    2.824    0.370    ?   Estimated from Shannon radii
+Hg 2   F  -1    2.058    0.370    ?   Estimated from Shannon radii
+In 1   Cl -1    2.848    0.370    ?   Estimated from Shannon radii
+In 2   F  -1    2.059    0.370    ?   Estimated from Shannon radii
+In 1   I  -1    3.182    0.370    ?   Estimated from Shannon radii
+In 2   Br -1    2.620    0.370    ?   Estimated from Shannon radii
+In 1   F  -1    2.416    0.370    ?   Estimated from Shannon radii
+In 2   I  -1    2.826    0.370    ?   Estimated from Shannon radii
+In 1   Br -1    2.976    0.370    ?   Estimated from Shannon radii
+In 2   Cl -1    2.491    0.370    ?   Estimated from Shannon radii
+K  1   I  -1    3.157    0.370    ?   Estimated from Shannon radii
+K  1   Br -1    2.951    0.370    ?   Estimated from Shannon radii
+K  1   F  -1    2.390    0.370    ?   Estimated from Shannon radii
+K  1   I  -1    3.157    0.370    ?   Estimated from Shannon radii
+K  1   Cl -1    2.822    0.370    ?   Estimated from Shannon radii
+K  1   Br -1    2.951    0.370    ?   Estimated from Shannon radii
+K  1   F  -1    2.390    0.370    ?   Estimated from Shannon radii
+K  1   Cl -1    2.822    0.370    ?   Estimated from Shannon radii
+Li 1   Cl -1    2.214    0.370    ?   Estimated from Shannon radii
+Li 1   I  -1    2.548    0.370    ?   Estimated from Shannon radii
+Li 1   Br -1    2.342    0.370    ?   Estimated from Shannon radii
+Li 1   F  -1    1.782    0.370    ?   Estimated from Shannon radii
+Li 1   I  -1    2.548    0.370    ?   Estimated from Shannon radii
+Li 1   Cl -1    2.214    0.370    ?   Estimated from Shannon radii
+Li 1   Br -1    2.342    0.370    ?   Estimated from Shannon radii
+Li 1   F  -1    1.782    0.370    ?   Estimated from Shannon radii
+Na 1   F  -1    2.064    0.370    ?   Estimated from Shannon radii
+Na 1   Br -1    2.625    0.370    ?   Estimated from Shannon radii
+Na 1   F  -1    2.064    0.370    ?   Estimated from Shannon radii
+Na 1   I  -1    2.831    0.370    ?   Estimated from Shannon radii
+Na 1   Cl -1    2.496    0.370    ?   Estimated from Shannon radii
+Na 1   Br -1    2.625    0.370    ?   Estimated from Shannon radii
+Na 1   I  -1    2.831    0.370    ?   Estimated from Shannon radii
+Na 1   Cl -1    2.496    0.370    ?   Estimated from Shannon radii
+Ni 2   Cl -1    2.152    0.370    ?   Estimated from Shannon radii
+Ni 2   Br -1    2.281    0.370    ?   Estimated from Shannon radii
+Ni 2   F  -1    1.720    0.370    ?   Estimated from Shannon radii
+Ni 1   I  -1    2.269    0.370    ?   Estimated from Shannon radii
+Ni 1   Cl -1    1.934    0.370    ?   Estimated from Shannon radii
+Ni 1   Br -1    2.063    0.370    ?   Estimated from Shannon radii
+Ni 1   F  -1    1.502    0.370    ?   Estimated from Shannon radii
+Ni 2   I  -1    2.487    0.370    ?   Estimated from Shannon radii
+Pd 2   I  -1    2.684    0.370    ?   Estimated from Shannon radii
+Pd 2   Cl -1    2.350    0.370    ?   Estimated from Shannon radii
+Pd 2   Br -1    2.478    0.370    ?   Estimated from Shannon radii
+Pd 2   F  -1    1.917    0.370    ?   Estimated from Shannon radii
+Pd 1   I  -1    2.393    0.370    ?   Estimated from Shannon radii
+Pd 1   Cl -1    2.059    0.370    ?   Estimated from Shannon radii
+Pd 1   Br -1    2.187    0.370    ?   Estimated from Shannon radii
+Pd 1   F  -1    1.627    0.370    ?   Estimated from Shannon radii
+Rb 1   I  -1    3.239    0.370    ?   Estimated from Shannon radii
+Rb 1   Br -1    3.033    0.370    ?   Estimated from Shannon radii
+Rb 1   Cl -1    2.904    0.370    ?   Estimated from Shannon radii
+Rb 1   F  -1    2.472    0.370    ?   Estimated from Shannon radii
+Rb 1   Br -1    3.033    0.370    ?   Estimated from Shannon radii
+Rb 1   Cl -1    2.904    0.370    ?   Estimated from Shannon radii
+Rb 1   I  -1    3.239    0.370    ?   Estimated from Shannon radii
+Rb 1   F  -1    2.472    0.370    ?   Estimated from Shannon radii
+Tl 1   Br -1    2.897    0.370    ?   Estimated from Shannon radii
+Tl 1   Cl -1    2.769    0.370    ?   Estimated from Shannon radii
+Tl 1   I  -1    3.103    0.370    ?   Estimated from Shannon radii
+Tl 1   F  -1    2.337    0.370    ?   Estimated from Shannon radii
+Tl 1   Br -1    2.897    0.370    ?   Estimated from Shannon radii
+Tl 1   Cl -1    2.769    0.370    ?   Estimated from Shannon radii
+Tl 1   I  -1    3.103    0.370    ?   Estimated from Shannon radii
+Tl 1   F  -1    2.337    0.370    ?   Estimated from Shannon radii
+#### EOF #### EOF #### EOF #### EOF #### EOF #### EOF #### EOF #### EOF ###

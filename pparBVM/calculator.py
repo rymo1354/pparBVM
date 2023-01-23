@@ -11,7 +11,7 @@ from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 
 class BVparams():
 
-    def __init__(self, bv_file_path='bvparms/bvparm2020.cif'):
+    def __init__(self, bv_file_path='bvparms/bvparm2020_suxuen.cif'):
         ''' Inspired by matminer BVparams '''
         parent_location = Path(os.path.abspath(__file__)).parent.absolute()
         self.bvfile = os.path.join(parent_location, bv_file_path) # Check gii_minimization directory for bv_file_path
@@ -200,10 +200,11 @@ class GIICalculator():
 
         def get_site_index_di_squared(site, structure, repeats):
             site_index = structure.index(site)
-            try:
-                neighbors = structure.site_properties['neighbors'][site_index] # If these have been added to the structure
-            except KeyError: # No 'neighbors' dictionary key in structure or no index for neighbor
-                neighbors = self.get_neighbors(structure, site_index)
+            #try:
+            #    neighbors = structure.site_properties['neighbors'][site_index] # If these have been added to the structure
+            #except KeyError: # No 'neighbors' dictionary key in structure or no index for neighbor
+            #    neighbors = self.get_neighbors(structure, site_index)
+            neighbors = self.get_neighbors(structure, site_index)
             di = self.di(site, neighbors)
             di_squared = self.di_squared(di)
             sym_di_squared = np.multiply(repeats, di_squared)
